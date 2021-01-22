@@ -1,0 +1,2160 @@
+<h1><b>RSMC Egg Donation</b></h1>
+<table>
+    <td><tr><mat-icon style="display: inline-flex; vertical-align: top;">information</mat-icon></tr></td>
+    <td><tr><p>Egg donation involves a screening process. Not all potential egg donors are selected. Not all selected egg donors receive the monetary amounts or compensation advertised. As with any medical procedure, there may be risks associated with human egg donation. Before an egg donor agrees to begin the egg donation process, and signs a legally binding contract, she is required to receive specific information on the known risks of egg donation. Consultation with your doctor prior to entering into a donor contract is advised.</p></tr></td>
+</table>
+
+<form *ngIf="showForm" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <table style="margin-left: 30px; display: inline-block; width: 70%;">
+    <td>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required>
+          <mat-error *ngIf="form.controls['firstName'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required>
+          <mat-error *ngIf="form.controls['lastName'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Street Address</mat-label>
+          <input matInput formControlName="streetAdd" required>
+          <mat-error *ngIf="form.controls['streetAdd'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" required>
+          <mat-error *ngIf="form.controls['city'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select formControlName="state" required>
+            <mat-option value="Alabama">AL</mat-option>
+            <mat-option value="Alaska">AK</mat-option>
+            <mat-option value="Arizona">AZ</mat-option>
+            <mat-option value="Arkansas">AR</mat-option>
+            <mat-option value="California">CA</mat-option>
+            <mat-option value="Colorado">CO</mat-option>
+            <mat-option value="Connecticut">CT</mat-option>
+            <mat-option value="Delaware">DE</mat-option>
+            <mat-option value="Florida">FL</mat-option>
+            <mat-option value="Georgia">GA</mat-option>
+            <mat-option value="Hawaii">HI</mat-option>
+            <mat-option value="Idaho">ID</mat-option>
+            <mat-option value="Illinois">IL</mat-option>
+            <mat-option value="Indiana">IN</mat-option>
+            <mat-option value="Iowa">IA</mat-option>
+            <mat-option value="Kansas">KS</mat-option>
+            <mat-option value="Kentucky">KY</mat-option>
+            <mat-option value="Louisiana">LA</mat-option>
+            <mat-option value="Maine">ME</mat-option>
+            <mat-option value="Maryland ">MD</mat-option>
+            <mat-option value="Massachusetts">MA</mat-option>
+            <mat-option value="Michigan">MI</mat-option>
+            <mat-option value="Minnesota">MN</mat-option>
+            <mat-option value="Mississippi">MS</mat-option>
+            <mat-option value="Missouri">MO</mat-option>
+            <mat-option value="Montana">MT</mat-option>
+            <mat-option value="Nebraska">NE</mat-option>
+            <mat-option value="Nevada">NV</mat-option>
+            <mat-option value="New Hampshire">NH</mat-option>
+            <mat-option value="New Jersey">NJ</mat-option>
+            <mat-option value="New Mexico">NM</mat-option>
+            <mat-option value="New York">NY</mat-option>
+            <mat-option value="North Carolina">NC</mat-option>
+            <mat-option value="North Dakota">ND</mat-option>
+            <mat-option value="Ohio">OH</mat-option>
+            <mat-option value="Oklahoma">OK</mat-option>
+            <mat-option value="Oregon">OR</mat-option>
+            <mat-option value="Pennsylvania">PA</mat-option>
+            <mat-option value="Rhode Island">RI</mat-option>
+            <mat-option value="Rhode Island">SC</mat-option>
+            <mat-option value="South Dakota">SD</mat-option>
+            <mat-option value="Tennessee">TN</mat-option>
+            <mat-option value="Texas">TX</mat-option>
+            <mat-option value="Utah">UT</mat-option>
+            <mat-option value="Vermont">VT</mat-option>
+            <mat-option value="Virginia">VA</mat-option>
+            <mat-option value="Washington">WA</mat-option>
+            <mat-option value="West Virginia">WV</mat-option>
+            <mat-option value="Wisconsin">WI</mat-option>
+            <mat-option value="Wyoming">WY</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['state'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate if outside 0f USA.</mat-label>
+          <textarea matInput formControlName="outside_USA"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please provide your city and country of residence</mat-label>
+          <textarea matInput formControlName="city_country_residence" required></textarea>
+          <mat-error *ngIf="form.controls['city_country_residence'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Zip Code</mat-label>
+          <input matInput formControlName="zip_code" required>
+          <mat-error *ngIf="form.controls['zip_code'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Primary telephone number (include area code) to use for contact and leaving messages</mat-label>
+          <input matInput formControlName="telephone_number" required>
+          <mat-error *ngIf="form.controls['telephone_number'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required>
+          <mat-error *ngIf="form.controls['email'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Preferred method of contact</mat-label>
+          <mat-select formControlName="contact_method" required>
+            <mat-option value="Phone">Phone</mat-option>
+            <mat-option value="Email">Email</mat-option>
+            <mat-option value="Text">Text</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['contact_method'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate "Others".</mat-label>
+          <textarea matInput formControlName="others_contact_method"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Date of birth</mat-label>
+          <input formControlName="birthDate" matInput [matDatepicker]="picker" required>
+          <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="form.controls['birthDate'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Age</mat-label>
+          <input matInput formControlName="age" required>
+          <mat-error *ngIf="form.controls['age'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>I want to become an egg donor because...</mat-label>
+          <textarea matInput formControlName="reason_egg_donor"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you currently an active donor with another program?</mat-label>
+          <mat-select formControlName="active_donor" required>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you an experienced egg donor?</mat-label>
+          <mat-select formControlName="experience" required>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How many times have you donated your eggs?</mat-label>
+          <input matInput formControlName="times_donated_eggs" required>
+          <mat-error *ngIf="form.controls['times_donated_eggs'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>The closest description of your race</mat-label>
+          <input matInput formControlName="race" required>
+          <mat-error *ngIf="form.controls['race'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you or any of your family member registered to the BIA (Bureau of Indian Aairs)?</mat-label>
+          <mat-select formControlName="registered_BIA" required>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="N/A">N/A</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Height</mat-label>
+          <input matInput formControlName="height" required>
+          <mat-error *ngIf="form.controls['height'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Weight</mat-label>
+          <input matInput formControlName="weight" required>
+          <mat-error *ngIf="form.controls['weight'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>BMI</mat-label>
+          <input matInput formControlName="bmi" required>
+          <mat-error *ngIf="form.controls['bmi'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Eye Color</mat-label>
+          <mat-select formControlName="eye_color" required>
+            <mat-option value="Blue">Blue</mat-option>
+            <mat-option value="Light Blue">Light Blue</mat-option>
+            <mat-option value="Dark Blue">Dark Blue</mat-option>
+            <mat-option value="Brown">Brown</mat-option>
+            <mat-option value="Light Brown">Light Brown</mat-option>
+            <mat-option value="Dark Brown">Dark Brown</mat-option>
+            <mat-option value="Green">Green</mat-option>
+            <mat-option value="Hazel">Hazel</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['eye_color'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Natural Hair Color</mat-label>
+          <mat-select formControlName="hair_color" required>
+            <mat-option value="Black">Black</mat-option>
+            <mat-option value="Blonde">Blonde</mat-option>
+            <mat-option value="Light Blonde">Light Blonde</mat-option>
+            <mat-option value="Dark Blonde">Dark Blonde</mat-option>
+            <mat-option value="Strawberry Blonde">Strawberry Blonde</mat-option>
+            <mat-option value="Brown">Brown</mat-option>
+            <mat-option value="Light Brown">Light Brown</mat-option>
+            <mat-option value="Dark Brown">Dark Brown</mat-option>
+            <mat-option value="Red">Red</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['hair_color'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Body Type</mat-label>
+          <mat-select formControlName="bodyType" required>
+            <mat-option value="Athletic">Athletic</mat-option>
+            <mat-option value="Average">Average</mat-option>
+            <mat-option value="Curvy">Curvy</mat-option>
+            <mat-option value="Petite">Petite</mat-option>
+            <mat-option value="Slim">Slim</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['bodyType'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate "Other".</mat-label>
+          <textarea matInput formControlName="other_bodyType"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Hair Type</mat-label>
+          <mat-select formControlName="hairType" required>
+            <mat-option value="Curly">Curly</mat-option>
+            <mat-option value="Fine">Fine</mat-option>
+            <mat-option value="Straight">Straight</mat-option>
+            <mat-option value="Wavy">Wavy</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['hairType'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate "Other".</mat-label>
+          <textarea matInput formControlName="other_hairType"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Complexion</mat-label>
+          <mat-select formControlName="complexion" required>
+            <mat-option value="Fair">Fair</mat-option>
+            <mat-option value="Medium">Medium</mat-option>
+            <mat-option value="Olive">Olive</mat-option>
+            <mat-option value="Dark">Dark</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['complexion'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate "Other".</mat-label>
+          <textarea matInput formControlName="other_complexion"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Dominant Hand</mat-label>
+          <mat-select formControlName="dominant_hand" required>
+            <mat-option value="Left-handed">Left-handed</mat-option>
+            <mat-option value="Right-handed">Right-handed</mat-option>
+            <mat-option value="Ambidextrous">Ambidextrous</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['dominant_hand'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Freckles</mat-label>
+          <mat-select formControlName="freckles" required>
+            <mat-option value="None">None</mat-option>
+            <mat-option value="Mild">Mild</mat-option>
+            <mat-option value="Moderate">Moderate</mat-option>
+            <mat-option value="Significant">Significant</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['freckles'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Blood Type</mat-label>
+          <mat-select formControlName="bloodType" required>
+            <mat-option value="A-">A-</mat-option>
+            <mat-option value="A+">A+</mat-option>
+            <mat-option value="B-">B-</mat-option>
+            <mat-option value="B+">B+</mat-option>
+            <mat-option value="AB-">AB-</mat-option>
+            <mat-option value="AB+">AB+</mat-option>
+            <mat-option value="O-">O-</mat-option>
+            <mat-option value="O+">O+</mat-option>
+            <mat-option value="Unknown">Unknown</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['bloodType'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please select your highest level of education</mat-label>
+          <mat-select formControlName="highest_level_education" required>
+            <mat-option value="None">None</mat-option>
+            <mat-option value="Some High School">Some High School</mat-option>
+            <mat-option value="GED">GED</mat-option>
+            <mat-option value="High School Diploma">High School Diploma</mat-option>
+            <mat-option value="Some Trade School">Some Trade School</mat-option>
+            <mat-option value="Trade School Diploma">Trade School Diploma</mat-option>
+            <mat-option value="Some College">Some College</mat-option>
+            <mat-option value="Currently in College">Currently in College</mat-option>
+            <mat-option value="2 Year College Degree">2 Year College Degree</mat-option>
+            <mat-option value="4 Year College Degree">4 Year College Degree</mat-option>
+            <mat-option value="Some Advanced Degree College">Some Advanced Degree College</mat-option>
+            <mat-option value="Masters Degree">Masters Degree</mat-option>
+            <mat-option value="Ph. D. Degree">Ph. D. Degree</mat-option>
+            <mat-option value="MD or DO Degree">MD or DO Degree</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Educational background</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Name of School</th>
+            <th>GPA</th>
+          </tr>
+          <tr>
+            <th>High School</th>
+            <td><input matInput formControlName="highSchool_name"></td>
+            <td><input matInput formControlName="highSchool_GPA"></td>
+          </tr>
+          <tr>
+            <th>University</th>
+            <td><input matInput formControlName="university_name"></td>
+            <td><input matInput formControlName="university_GPA"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Educational background</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Major</th>
+            <th>Degree</th>
+          </tr>
+          <tr>
+            <th>High School</th>
+            <td><input matInput formControlName="highSchool_major"></td>
+            <td><input matInput formControlName="highSchool_degree"></td>
+          </tr>
+          <tr>
+            <th>University</th>
+            <td><input matInput formControlName="university_major"></td>
+            <td><input matInput formControlName="university_degree"></td>
+          </tr>
+          <tr>
+            <th>Other</th>
+            <td><input matInput formControlName="other_major"></td>
+            <td><input matInput formControlName="other_degree"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Strongest subjects in school</mat-label>
+          <input matInput formControlName="strongest_subjects" required>
+          <mat-error *ngIf="form.controls['strongest_subjects'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Weakest subjects in school</mat-label>
+          <input matInput formControlName="weakest_subjects" required>
+          <mat-error *ngIf="form.controls['weakest_subjects'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please list any awards, certficates or accomplishments</mat-label>
+          <textarea matInput formControlName="awards"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Country of birth</mat-label>
+          <input matInput formControlName="country_birth" required>
+          <mat-error *ngIf="form.controls['country_birth'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Marital/relationship status</mat-label>
+          <mat-select formControlName="marital_status" required>
+            <mat-option value="Single">Single</mat-option>
+            <mat-option value="Single (in relationship)">Single (in relationship)</mat-option>
+            <mat-option value="Engaged">Engaged</mat-option>
+            <mat-option value="Married">Married</mat-option>
+            <mat-option value="Separated">Separated</mat-option>
+            <mat-option value="Divorced">Divorced</mat-option>
+            <mat-option value="Partnered">Partnered</mat-option>
+            <mat-option value="Widowed">Widowed</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['marital_status'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How would your friends describe your personality?</mat-label>
+          <textarea matInput formControlName="personality"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Is your schedule flexible?</label><br><br>
+          <mat-radio-group formControlName="schedule_flexible" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What are your career goals?</mat-label>
+          <textarea matInput formControlName="career_goals"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What languages do you speak?</mat-label>
+          <input matInput formControlName="languages_speak" required>
+          <mat-error *ngIf="form.controls['languages_speak'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Describe your musical talent</mat-label>
+          <textarea matInput formControlName="musical_talent"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Describe your artistic talent</mat-label>
+          <textarea matInput formControlName="artistic_talent"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Describe your athletic talent</mat-label>
+          <textarea matInput formControlName="athletic_talent"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Describe your hobbies</mat-label>
+          <textarea matInput formControlName="hobbies"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How is your vision without corrective lenses or surgery?</mat-label>
+          <mat-select formControlName="vision" required>
+            <mat-option value="Poor">Poor</mat-option>
+            <mat-option value="Fair">Fair</mat-option>
+            <mat-option value="Good">Good</mat-option>
+            <mat-option value="Excellent">Excellent</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['vision'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Do you have any of the following:</mat-label>
+          <mat-select formControlName="following" required>
+            <mat-option value="Astigmatism">Astigmatism</mat-option>
+            <mat-option value="Farsighted">Farsighted</mat-option>
+            <mat-option value="Nearsighted">Nearsighted</mat-option>
+            <mat-option value="None">None</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['following'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How would you describe the condition of your teeth?</mat-label>
+          <mat-select formControlName="teeth" required>
+            <mat-option value="Poor">Poor</mat-option>
+            <mat-option value="Fair">Fair</mat-option>
+            <mat-option value="Good">Good</mat-option>
+            <mat-option value="Excellent">Excellent</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['teeth'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had any periodontal or orthodontic work?</label><br><br>
+          <mat-radio-group formControlName="periodontal_work" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How is your hearing without corrective aids?</mat-label>
+          <mat-select formControlName="hearing" required>
+            <mat-option value="Poor">Poor</mat-option>
+            <mat-option value="Fair">Fair</mat-option>
+            <mat-option value="Good">Good</mat-option>
+            <mat-option value="Excellent">Excellent</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['hearing'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Do you have baldness?</mat-label>
+          <mat-select formControlName="baldness" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes – minor">Yes – minor</mat-option>
+            <mat-option value="Yes – noticeable">Yes – noticeable</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['baldness'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Does baldness run in your family?</mat-label>
+          <mat-select formControlName="baldness_family" required>
+            <mat-option value="Yes - mother's side of the family">Yes - mother's side of the family</mat-option>
+            <mat-option value="Yes- father's side of the family">Yes- father's side of the family</mat-option>
+            <mat-option value="Yes- both sides of the family">Yes- both sides of the family</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['baldness_family'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you experienced premature graying?</mat-label>
+          <mat-select formControlName="graying" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes - before age 20">Yes - before age 20</mat-option>
+            <mat-option value="Yes - before age 30">Yes - before age 30</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['graying'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Are you currently under a physicians care for any reason?</mat-label>
+          <mat-select formControlName="under_physicians" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes - for mental health reasons">Yes - for mental health reasons</mat-option>
+            <mat-option value="Yes - for reproductive reasons">Yes - for reproductive reasons</mat-option>
+            <mat-option value="Yes - for chronic illness reasons">Yes - for chronic illness reasons</mat-option>
+            <mat-option value="Yes - for injury reasons">Yes - for injury reasons</mat-option>
+            <mat-option value="Yes - for other reasons">Yes - for other reasons</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['under_physicians'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever been seen by psychiatrist, psychologist, social worker, counselor, or any other medical health professional for any reason?</mat-label>
+          <mat-select formControlName="psychiatrist" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes - currently getting support">Yes - currently getting support</mat-option>
+            <mat-option value="Yes - within the past 12 months">Yes - within the past 12 months</mat-option>
+            <mat-option value="Yes - over 12 months ago">Yes - over 12 months ago</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['psychiatrist'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes, when, for how long, for what reason.</mat-label>
+          <textarea matInput formControlName="yes_psychiatrist"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr [formGroup]="Form">
+        <mat-label><b>List all prescription medications that you have taken in the past 12 months</b></mat-label><br><br>
+        <table id="customers" formGroupName="list_medications">
+          <ng-container *ngIf="Form.controls.list_medications!=null">
+            <div *ngFor="let list_medication of Form.controls.list_medications.controls; let i=index" [formGroupName]="i">
+              <tr>
+                <td><input matInput formControlName="no" placeholder="No"></td>
+                <td><input matInput formControlName="medication" placeholder="Medication"></td>
+                <td><input matInput formControlName="how_often" placeholder="How Often"></td>
+                <td><input matInput formControlName="reason" placeholder="Reason"></td>
+                <td><button mat-raised-button color="warn" (click)="deleteRow(i)">X</button></td>
+              </tr>
+            </div>
+          </ng-container>
+        </table>
+        <br>
+        <button mat-raised-button color="Primary" type="button" (click)="addNewRow()" [disabled]="Form.invalid">Add More</button>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</mat-label>
+          <mat-select formControlName="medications" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes – current">Yes – current</mat-option>
+            <mat-option value="Yes - used within the past 12 months">Yes - used within the past 12 months</mat-option>
+            <mat-option value="Yes - used over 12 months ago">Yes - used over 12 months ago</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['medications'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you had any serious illness in the past that resulted in hospitalization?</mat-label>
+          <mat-select formControlName="past_illness" required>
+            <mat-option value="Yes">Yes</mat-option>
+            <mat-option value="No">No</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['past_illness'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes, please indicate.</mat-label>
+          <textarea matInput formControlName="yes_past_illness"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr [formGroup]="Form2">
+          <mat-label><b>List all surgical procedures</b></mat-label><br><br>
+        <table id="customers" formGroupName="list_surgical_procedures">
+          <ng-container *ngIf="Form2.controls.list_surgical_procedures!=null">
+            <div *ngFor="let list_surgical_procedure of Form2.controls.list_surgical_procedures.controls; let i=index" [formGroupName]="i">
+              <tr>
+                <td><input matInput formControlName="no" placeholder="No"></td>
+                <td><input matInput formControlName="date" placeholder="Date"></td>
+                <td><input matInput formControlName="procedure" placeholder="Procedure"></td>
+                <td><input matInput formControlName="reason" placeholder="Reason"></td>
+                <td><input matInput formControlName="outcome" placeholder="Outcome"></td>
+                <td><button mat-raised-button color="warn" (click)="deleteRow2(i)">X</button></td>
+              </tr>
+            </div>
+          </ng-container>
+        </table>
+        <br>
+        <button mat-raised-button color="Primary" type="button" (click)="addNewRow2()" [disabled]="Form.invalid">Add More</button>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever had any complications or concerns with anesthesia?</mat-label>
+          <mat-select formControlName="anesthesia" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes - just nausea">Yes - just nausea</mat-option>
+            <mat-option value="Yes - tired or dizziness">Yes - tired or dizziness</mat-option>
+            <mat-option value="Yes - other (minor)">Yes - other (minor)</mat-option>
+            <mat-option value="Yes - other (major)">Yes - other (major)</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['anesthesia'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes - other (minor/major), please indicate.</mat-label>
+          <textarea matInput formControlName="yes_anesthesia"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you had a blood transfusion?</mat-label>
+          <mat-select formControlName="blood_transfusion" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes - in the USA or Canada">Yes - in the USA or Canada</mat-option>
+            <mat-option value="Yes - outside the USA or Canada in the past 2 years">Yes - outside the USA or Canada in the past 2 years</mat-option>
+            <mat-option value="Yes - outside the USA or Canada over 2 years ago">Yes - outside the USA or Canada over 2 years ago</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['blood_transfusion'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes, when?</mat-label>
+          <textarea matInput formControlName="yes_blood_transfusion"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever been refused or denied as a blood donor?</mat-label>
+          <mat-select formControlName="refused_blood_donor" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Yes - for dietary reason">Yes - for dietary reason</mat-option>
+            <mat-option value="Yes - for illness reasons">Yes - for illness reasons</mat-option>
+            <mat-option value="Yes - for other reasons">Yes - for other reasons</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['refused_blood_donor'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes, why?</mat-label>
+          <textarea matInput formControlName="yes_refused_blood_donor"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Do you have allergies?</mat-label>
+          <mat-select formControlName="allergies" required>
+            <mat-option value="No">No</mat-option>
+            <mat-option value="Amoxicillin">Amoxicillin</mat-option>
+            <mat-option value="Asthma">Asthma</mat-option>
+            <mat-option value="Eggs">Eggs</mat-option>
+            <mat-option value="Fish">Fish</mat-option>
+            <mat-option value="Hay Fever">Hay Fevern</mat-option>
+            <mat-option value="Latex">Latex</mat-option>
+            <mat-option value="Milk">Milk</mat-option>
+            <mat-option value="Peanut">Peanut</mat-option>
+            <mat-option value="Pets">Pets</mat-option>
+            <mat-option value="Seasonal (minor)">Seasonal (minor)</mat-option>
+            <mat-option value="Shellfish">Shellfish</mat-option>
+            <mat-option value="Sulfa">Sulfa</mat-option>
+            <mat-option value="Sulfite">Sulfiten</mat-option>
+            <mat-option value="Sun">Sun</mat-option>
+            <mat-option value="Sun">Sun</mat-option>
+            <mat-option value="Penicillin">Penicillin</mat-option>
+            <mat-option value="Wheat">Wheat</mat-option>
+            <mat-option value="Other (explain)">Other (explain)</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['allergies'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Do you have biological children?</label><br><br>
+          <mat-radio-group formControlName="bioChildren" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>If yes, please list ages of children.</mat-label>
+          <textarea matInput formControlName="list_ages_children"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>What kind of contraception do you currently use?</mat-label>
+          <mat-select formControlName="contraception" required>
+            <mat-option value="None">None</mat-option>
+            <mat-option value="Vasectomy">Vasectomy</mat-option>
+            <mat-option value="IUD - Non hormonal">IUD - Non hormonal</mat-option>
+            <mat-option value="IUD - Implanon">IUD - Implanon</mat-option>
+            <mat-option value="IUD - Mirena">IUD - Mirena</mat-option>
+            <mat-option value="Nuva Ring">Nuva Ring</mat-option>
+            <mat-option value="Diaphragm">Diaphragm</mat-option>
+            <mat-option value="Condom">Condom</mat-option>
+            <mat-option value="Birth Control Pills">Birth Control Pills</mat-option>
+            <mat-option value="Rhythm">Rhythm</mat-option>
+            <mat-option value="Spermicide">Spermicide</mat-option>
+            <mat-option value="Depo-Provera">Depo-Provera</mat-option>
+            <mat-option value="Tubal Ligation">Tubal Ligation</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['contraception'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please explain "Other".</mat-label>
+          <textarea matInput formControlName="other_contraception"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Please provide information related to your menstrual cycle.</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Age Started Period</th>
+            <th>Are Cycles Regular</th>
+            <th>Cycle Length</th>
+          </tr>
+          <tr>
+            <th>--></th>
+            <td><input matInput formControlName="age_started_period"></td>
+            <td><input matInput formControlName="are_cycles_regular"></td>
+            <td><input matInput formControlName="cycle_length"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Please provide information related to your Pap Smear results.</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Recent Pap</th>
+            <th>Recent Results</th>
+            <th>Previous Results</th>
+          </tr>
+          <tr>
+            <th>--></th>
+            <td><input matInput formControlName="recent_pap"></td>
+            <td><input matInput formControlName="recent_results"></td>
+            <td><input matInput formControlName="previous_results"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Please provide information related to STD's</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Me</th>
+            <th>My Partner</th>
+            <th>None</th>
+          </tr>
+          <tr>
+            <th>AIDS</th>
+            <td><mat-checkbox formControlName="AIDS_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="AIDS_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="AIDS_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Chlamydia</th>
+            <td><mat-checkbox formControlName="Chlamydia_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Chlamydia_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Chlamydia_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Genital Herpes</th>
+            <td><mat-checkbox formControlName="Genital_Herpes_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Genital_Herpes_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Genital_Herpes_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Genital Sores</th>
+            <td><mat-checkbox formControlName="Genital_Sores_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Genital_Sores_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Genital_Sores_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Gonorrhea</th>
+            <td><mat-checkbox formControlName="Gonorrhea_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Gonorrhea_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Gonorrhea_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>HIV</th>
+            <td><mat-checkbox formControlName="HIV_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="HIV_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="HIV_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>NSU (non specific urethritis)</th>
+            <td><mat-checkbox formControlName="NSU_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="NSU_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="NSU_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Penis Discharge</th>
+            <td><mat-checkbox formControlName="Penis_Discharge_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Penis_Discharge_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Penis_Discharge_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Syphilis</th>
+            <td><mat-checkbox formControlName="Syphilis_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Syphilis_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Syphilis_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Trichomonas</th>
+            <td><mat-checkbox formControlName="Trichomonas_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Trichomonas_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Trichomonas_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Venereal Warts</th>
+            <td><mat-checkbox formControlName="Venereal_Warts_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Venereal_Warts_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Venereal_Warts_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Viral Hepatitis B or C</th>
+            <td><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_None"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Other sexually transmitted diseases</th>
+            <td><mat-checkbox formControlName="Other_Me"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Other_Partner"></mat-checkbox></td>
+            <td><mat-checkbox formControlName="Other_None"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you ever had the following:</mat-label>
+          <mat-select formControlName="ever_had" required>
+            <mat-option value="Astigmatism">Astigmatism</mat-option>
+            <mat-option value="Farsighted">Farsighted</mat-option>
+            <mat-option value="Nearsighted">Nearsighted</mat-option>
+            <mat-option value="None">None</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['ever_had'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Please select the most accurate answer for the following question about smoking (including vape, hookah, e-cigarette), drinking, marijuana and other drugs (Cocaine, Heroin, etc).</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Smoking</th>
+            <th>Alcohol</th>
+            <th>Marijuana</th>
+            <th>Other Drugs</th>
+          </tr>
+          <tr>
+            <th>--></th>
+            <td><input matInput formControlName="smoking"></td>
+            <td><input matInput formControlName="alcohol"></td>
+            <td><input matInput formControlName="marijuana"></td>
+            <td><input matInput formControlName="other_drugs"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Please select the most appropriate answers for tattoos, acupuncture and body piercings.</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Yes or No?</th>
+          </tr>
+          <tr>
+            <th>Tattoos</th>
+            <td><input matInput formControlName="tattoos"></td>
+          </tr>
+          <tr>
+            <th>Body Piercing</th>
+            <td><input matInput formControlName="body_piercing"></td>
+          </tr>
+          <tr>
+            <th>Acupuncture</th>
+            <td><input matInput formControlName="acupuncture"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Please select the most accurate answers regarding question about your experience with the law.</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Times Arrested</th>
+            <th>Times Convicted</th>
+            <th>Misdemeanors</th>
+          </tr>
+          <tr>
+            <th>--></th>
+            <td><input matInput formControlName="times_arrested"></td>
+            <td><input matInput formControlName="times_convicted"></td>
+            <td><input matInput formControlName="misdemeanors"></td>
+          </tr>
+        </table>
+        <br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Felonies</th>
+            <th>Days of Incarceration</th>
+            <th>Most Recent Incarceration</th>
+          </tr>
+          <tr>
+            <th>--></th>
+            <td><input matInput formControlName="felonies"></td>
+            <td><input matInput formControlName="incarceration"></td>
+            <td><input matInput formControlName="most_incarceration"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Are you adopted?</label><br><br>
+          <mat-radio-group formControlName="adopted" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How many blood siblings are in your immediate family (including yourself and half siblings)?</mat-label>
+          <input matInput formControlName="siblings" required>
+          <mat-error *ngIf="form.controls['siblings'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Please provide the ethnic origin of each Grandparent. (French, German, Irish, Norwegian, Mexican, etc.)</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Maternal Grandmother</th>
+            <th>Maternal Grandfather</th>
+            <th>Paternal Grandmother</th>
+            <th>Paternal Grandfather</th>
+          </tr>
+          <tr>
+            <th>Ethnic Origin</th>
+            <td><input matInput formControlName="maternal_grandmother"></td>
+            <td><input matInput formControlName="maternal_grandfather"></td>
+            <td><input matInput formControlName="paternal_grandmother"></td>
+            <td><input matInput formControlName="paternal_grandfather"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Please provide a description of each parent and grandparent. Please complete this table. (Bone Structure refers to petite, athletic, average.)</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Race</th>
+            <th>Height</th>
+            <th>Bone Structure</th>
+          </tr>
+          <tr>
+            <th>Mother</th>
+            <td><input matInput formControlName="mother_race"></td>
+            <td><input matInput formControlName="mother_height"></td>
+            <td><input matInput formControlName="mother_bone_structure"></td>
+          </tr>
+          <tr>
+            <th>Father</th>
+            <td><input matInput formControlName="father_race"></td>
+            <td><input matInput formControlName="father_height"></td>
+            <td><input matInput formControlName="father_bone_structure"></td>
+          </tr>
+          <tr>
+            <th>Maternal Grandmother</th>
+            <td><input matInput formControlName="Maternal_Grandmother_race"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_height"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_bone_structure"></td>
+          </tr>
+          <tr>
+            <th>Maternal Grandfather</th>
+            <td><input matInput formControlName="Maternal_Grandfather_race"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_height"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_bone_structure"></td>
+          </tr>
+          <tr>
+            <th>Paternal Grandmother</th>
+            <td><input matInput formControlName="Paternal_Grandmother_race"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_height"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_bone_structure"></td>
+          </tr>
+          <tr>
+            <th>Paternal Grandfather</th>
+            <td><input matInput formControlName="Paternal_Grandfather_race"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_height"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_bone_structure"></td>
+          </tr>
+        </table>
+        <br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Eye Color</th>
+            <th>Hair Color</th>
+            <th>Complexion</th>
+          </tr>
+          <tr>
+            <th>Mother</th>
+            <td><input matInput formControlName="mother_eye_color"></td>
+            <td><input matInput formControlName="mother_hair_color"></td>
+            <td><input matInput formControlName="mother_complexion"></td>
+          </tr>
+          <tr>
+            <th>Father</th>
+            <td><input matInput formControlName="father_eye_color"></td>
+            <td><input matInput formControlName="father_hair_color"></td>
+            <td><input matInput formControlName="father_complexion"></td>
+          </tr>
+          <tr>
+            <th>Maternal Grandmother</th>
+            <td><input matInput formControlName="Maternal_Grandmother_eye_color"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_hair_color"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_complexion"></td>
+          </tr>
+          <tr>
+            <th>Maternal Grandfather</th>
+            <td><input matInput formControlName="Maternal_Grandfather_eye_color"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_hair_color"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_complexion"></td>
+          </tr>
+          <tr>
+            <th>Paternal Grandmother</th>
+            <td><input matInput formControlName="Paternal_Grandmother_eye_color"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_hair_color"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_complexion"></td>
+          </tr>
+          <tr>
+            <th>Paternal Grandfather</th>
+            <td><input matInput formControlName="Paternal_Grandfather_eye_color"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_hair_color"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_complexion"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>Please provide a description of each sibling. Please complete this table. (Bone Structure refers to petite, athletic, average.)</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Gender</th>
+            <th>Full or Half Sibling</th>
+            <th>Height</th>
+            <th>Bone Structure</th>
+          </tr>
+          <tr>
+            <th>Sibling 1</th>
+            <td><input matInput formControlName="sibling1_gender"></td>
+            <td><input matInput formControlName="sibling1_full_half"></td>
+            <td><input matInput formControlName="sibling1_height"></td>
+            <td><input matInput formControlName="sibling1_bone_structure"></td>
+          </tr>
+          <tr>
+            <th>Sibling 2</th>
+            <td><input matInput formControlName="sibling2_gender"></td>
+            <td><input matInput formControlName="sibling2_full_half"></td>
+            <td><input matInput formControlName="sibling2_height"></td>
+            <td><input matInput formControlName="sibling2_bone_structure"></td>
+          </tr>
+        </table>
+        <br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Eye Color</th>
+            <th>Hair Color</th>
+            <th>Complexion</th>
+          </tr>
+          <tr>
+            <th>Sibling 1</th>
+            <td><input matInput formControlName="sibling1_eye_color"></td>
+            <td><input matInput formControlName="sibling1_hair_color"></td>
+            <td><input matInput formControlName="sibling1_complexion"></td>
+          </tr>
+          <tr>
+            <th>Sibling 2</th>
+            <td><input matInput formControlName="sibling2_eye_color"></td>
+            <td><input matInput formControlName="sibling2_hair_color"></td>
+            <td><input matInput formControlName="sibling2_complexion"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>For all genetic relatives living and deceased, please complete the following table. If unknown, type "unknown".</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>(If living) Current Age</th>
+            <th>(If living) Health Issues</th>
+            <th>(If dead) Age of Death</th>
+            <th>(If dead) Cause of Death</th>
+          </tr>
+          <tr>
+            <th>Mother</th>
+            <td><input matInput formControlName="mother_age"></td>
+            <td><input matInput formControlName="mother_health"></td>
+            <td><input matInput formControlName="mother_age_death"></td>
+            <td><input matInput formControlName="mother_cause_death"></td>
+          </tr>
+          <tr>
+            <th>Father</th>
+            <td><input matInput formControlName="Father_age"></td>
+            <td><input matInput formControlName="Father_health"></td>
+            <td><input matInput formControlName="Father_age_death"></td>
+            <td><input matInput formControlName="Father_cause_death"></td>
+          </tr>
+          <tr>
+            <th>Maternal Grandmother</th>
+            <td><input matInput formControlName="Maternal_Grandmother_age"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_health"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_age_death"></td>
+            <td><input matInput formControlName="Maternal_Grandmother_cause_death"></td>
+          </tr>
+          <tr>
+            <th>Maternal Grandfather</th>
+            <td><input matInput formControlName="Maternal_Grandfather_age"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_health"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_age_death"></td>
+            <td><input matInput formControlName="Maternal_Grandfather_cause_death"></td>
+          </tr>
+          <tr>
+            <th>Paternal Grandmother</th>
+            <td><input matInput formControlName="Paternal_Grandmother_age"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_health"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_age_death"></td>
+            <td><input matInput formControlName="Paternal_Grandmother_cause_death"></td>
+          </tr>
+          <tr>
+            <th>Paternal Grandfather</th>
+            <td><input matInput formControlName="Paternal_Grandfather_age"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_health"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_age_death"></td>
+            <td><input matInput formControlName="Paternal_Grandfather_cause_death"></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list below.</mat-label>
+          <input matInput formControlName="positive_carrier" required>
+          <mat-error *ngIf="form.controls['positive_carrier'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-label><b>Have you ever had any of the following diseases or tested positive as a carrier?</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Canavan Disease</th>
+            <td><mat-checkbox formControlName="Canavan_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Cystic Fibrosis</th>
+            <td><mat-checkbox formControlName="Cystic_Fibrosis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Fragile X Syndrome</th>
+            <td><mat-checkbox formControlName="Fragile_X_Syndrome"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Gaucher Disease</th>
+            <td><mat-checkbox formControlName="Gaucher_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Sickle Cell Disease</th>
+            <td><mat-checkbox formControlName="Sickle_Cell_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Spinal Muscular Atrophy</th>
+            <td><mat-checkbox formControlName="Spinal_Muscular_Atrophy"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Tay-Sachs Disease</th>
+            <td><mat-checkbox formControlName="Tay_Sachs_Disease"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>ADDICTION</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Alcoholism</th>
+            <td><mat-checkbox formControlName="Alcoholism"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Compulsive Behaviors</th>
+            <td><mat-checkbox formControlName="Compulsive_Behaviors"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Drug Abuse</th>
+            <td><mat-checkbox formControlName="Drug_Abuse"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Drug Addict</th>
+            <td><mat-checkbox formControlName="Drug_Addict"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Drug Misuse</th>
+            <td><mat-checkbox formControlName="Drug_Misuse"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Gambling</th>
+            <td><mat-checkbox formControlName="Gambling"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Smoking</th>
+            <td><mat-checkbox formControlName="Smoking"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>BIRTH DEFECTS</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Cleft Lip / Palate</th>
+            <td><mat-checkbox formControlName="Cleft_Lip_Palate"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Congenital Hip Problems</th>
+            <td><mat-checkbox formControlName="Congenital_Hip_Problems"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Club Feet</th>
+            <td><mat-checkbox formControlName="Club_Feet"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Heart Defect</th>
+            <td><mat-checkbox formControlName="Heart_Defect"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hearing Problems</th>
+            <td><mat-checkbox formControlName="Hearing_Problems"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Holoprosencehpaly</th>
+            <td><mat-checkbox formControlName="Holoprosencehpaly"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Microcephaly</th>
+            <td><mat-checkbox formControlName="Microcephaly"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Neural Tube (open spine)</th>
+            <td><mat-checkbox formControlName="Neural_Tube"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Spina Bifida</th>
+            <td><mat-checkbox formControlName="Spina_Bifida"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>BLOOD</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Anemia</th>
+            <td><mat-checkbox formControlName="Anemia"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Bleeding/Clotting Disorder</th>
+            <td><mat-checkbox formControlName="Bleeding_Clotting_Disorder"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Blood clots or strokes</th>
+            <td><mat-checkbox formControlName="Blood_clots_or_strokes"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Factor V Leiden Thrombophilia</th>
+            <td><mat-checkbox formControlName="Factor_V_Leiden_Thrombophilia"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hemophilia</th>
+            <td><mat-checkbox formControlName="Hemophilia"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>HIV</th>
+            <td><mat-checkbox formControlName="HIV"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Immune Deficiency</th>
+            <td><mat-checkbox formControlName="Immune_Deficiency"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Leukemia</th>
+            <td><mat-checkbox formControlName="Leukemia"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Lymphoma</th>
+            <td><mat-checkbox formControlName="Lymphoma"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Polyarteritis Nodose</th>
+            <td><mat-checkbox formControlName="Polyarteritis_Nodose"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Sickle-Cell Anemia</th>
+            <td><mat-checkbox formControlName="Sickle_Cell_Anemia"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Swollen Lymph Nodes</th>
+            <td><mat-checkbox formControlName="Swolle_Lymph_Nodes"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Thalassemia</th>
+            <td><mat-checkbox formControlName="Thalassemia"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Von Willebrand's Disease</th>
+            <td><mat-checkbox formControlName="Von_Willebrand_Disease"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>CANCER</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Breast</th>
+            <td><mat-checkbox formControlName="Breast"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>ColonIntestinal</th>
+            <td><mat-checkbox formControlName="ColonIntestinal"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Intestinal</th>
+            <td><mat-checkbox formControlName="Intestinal"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Lung</th>
+            <td><mat-checkbox formControlName="Lung"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Ovarian</th>
+            <td><mat-checkbox formControlName="Ovarian"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Prostate</th>
+            <td><mat-checkbox formControlName="Prostate"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Skin</th>
+            <td><mat-checkbox formControlName="Skin"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Stomach</th>
+            <td><mat-checkbox formControlName="Stomach"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Testicular</th>
+            <td><mat-checkbox formControlName="Testicular"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Thyroid</th>
+            <td><mat-checkbox formControlName="Thyroid"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Uterine</th>
+            <td><mat-checkbox formControlName="Uterine"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>CHROMOSOMAL</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Down Syndrome</th>
+            <td><mat-checkbox formControlName="Down_Syndrome"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Fragile X</th>
+            <td><mat-checkbox formControlName="Fragile_X"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Klinefelter's Turner</th>
+            <td><mat-checkbox formControlName="Klinefelter_Turner"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>GASTRO-INTESTINAL</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Appendicitis</th>
+            <td><mat-checkbox formControlName="Appendicitis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Cirrhosis of the Liver</th>
+            <td><mat-checkbox formControlName="Cirrhosis_of_the_Liver"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Crohn's Disease</th>
+            <td><mat-checkbox formControlName="Crohn_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Gallstones</th>
+            <td><mat-checkbox formControlName="Gallstones"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hepatitis A, B, or C</th>
+            <td><mat-checkbox formControlName="Hepatitis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Inflammatory Bowel Disease</th>
+            <td><mat-checkbox formControlName="Inflammatory_Bowel_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Multiple Polyps of the Colon</th>
+            <td><mat-checkbox formControlName="Multiple_Polyps_of_the_Colon"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Pyloric Stenosis</th>
+            <td><mat-checkbox formControlName="Pyloric_Stenosis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Rectal Disorder</th>
+            <td><mat-checkbox formControlName="Rectal_Disorder"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Ulcer of Stomach or Duodenum</th>
+            <td><mat-checkbox formControlName="Ulcer_of_Stomach_or_Duodenum"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Ulcerative Colitis</th>
+            <td><mat-checkbox formControlName="Ulcerative_Colitis"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>GENITAL / REPRODUCTIVE</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Ambiguous Genitals</th>
+            <td><mat-checkbox formControlName="Ambiguous_Genitals"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Discharge Polycystic</th>
+            <td><mat-checkbox formControlName="Discharge_Polycystic"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Endometriosis</th>
+            <td><mat-checkbox formControlName="Endometriosis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hermaphroditism</th>
+            <td><mat-checkbox formControlName="Hermaphroditism"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hypospadias</th>
+            <td><mat-checkbox formControlName="Hypospadias"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Low Sperm Count</th>
+            <td><mat-checkbox formControlName="Low_Sperm_Count"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Ovarian Cysts</th>
+            <td><mat-checkbox formControlName="Ovarian_Cysts"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Ovarian Syndrome(PCOS)</th>
+            <td><mat-checkbox formControlName="Ovarian_Syndrome"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Pelvic Inflammatory Disease(PID)</th>
+            <td><mat-checkbox formControlName="Pelvic_Inflammatory_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Ruptured Lumps or Cysts in Breast</th>
+            <td><mat-checkbox formControlName="Ruptured_Lumps_or_Cysts_in_Breast"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Undescended Testicle</th>
+            <td><mat-checkbox formControlName="Undescended_Testicle"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Uterine Fibroids</th>
+            <td><mat-checkbox formControlName="Uterine_Fibroids"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>HEART</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Congenital Heart Disease</th>
+            <td><mat-checkbox formControlName="Congenital_Heart_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Hardening of the Arteries</th>
+            <td><mat-checkbox formControlName="Hardening_of_the_Arteries"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Heart Attack</th>
+            <td><mat-checkbox formControlName="Heart_Attack"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Heart Defect</th>
+            <td><mat-checkbox formControlName="Heart_Defects"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Heart Disease</th>
+            <td><mat-checkbox formControlName="Heart_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>High Blood Pressure</th>
+            <td><mat-checkbox formControlName="High_Blood_Pressure"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>High Cholesterol Level</th>
+            <td><mat-checkbox formControlName="High_Cholesterol_Level"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Stroke</th>
+            <td><mat-checkbox formControlName="Stroke"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>SKIN</b></mat-label><br><br>
+        <table id="customers">
+          <tr>
+            <th></th>
+            <th>Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th>Severe Acne</th>
+            <td><mat-checkbox formControlName="Severe_Acne"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Albinism</th>
+            <td><mat-checkbox formControlName="Albinism"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Eczema</th>
+            <td><mat-checkbox formControlName="Eczema"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Excessive Facial Hair</th>
+            <td><mat-checkbox formControlName="Excessive_Facial_Hair"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Infectious Skin Disease</th>
+            <td><mat-checkbox formControlName="Infectious_Skin_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Pigmentation Disorders</th>
+            <td><mat-checkbox formControlName="Pigmentation_Disorders"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Psoriasis</th>
+            <td><mat-checkbox formControlName="Psoriasis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th>Neurofibromatosis</th>
+            <td><mat-checkbox formControlName="Neurofibromatosis"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever injected drugs or had a sexual partner who did so?</label><br><br>
+          <mat-radio-group formControlName="injected_drugs" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Do you have hemophilia or other related clotting disorders and have received human-derived clotting factor concentrates in the preceding five years, not including receiving clotting factors once to treat an acute bleeding event more than 12 months ago?</label><br><br>
+          <mat-radio-group formControlName="clotting" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you engaged in sexual activity in exhange for money or drugs in the last five years?</label><br><br>
+          <mat-radio-group formControlName="sexual_activity" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had sex in the preceding 12 months with any person who would have answered yes to any of the previous items, or had sex with a male who has had sex with another male in the preceding 5 years, or with any person known or suspected to have HIV infection, including any person who has had a positive or reactive test for HIV virus hepatitis B (HBV) infection or clinically active (symptomatic) hepatitis C (HCV) infection?</label><br><br>
+          <mat-radio-group formControlName="sex_12" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you been exposed in the preceding 12 months to known or suspected HIV, HBV, and/or HCV-infected blood through percutaneous inoculation (e.g., needle stick) or through contact with an open wound, non-intact skin, or mucous membrane?</label><br><br>
+          <mat-radio-group formControlName="exposed_preceding" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had a prior reactive (or positive) screening test for HIV?</label><br><br>
+          <mat-radio-group formControlName="test_HIV" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever had unexplained weight loss, night sweats, disseminated lymphadenopathy (swollen lymph nodes) for longer than one month, unexplained persistent cough or shortness of breath, unexplained persistent diarrhea, unexplained persistent white spots or unusual blemishes in the mouth, opportunistic infections (infection that takes advantage of a weakened immune system), or blue or purple spots on or under the skin or mucous membranes typical of Kaposi's sarcoma?</label><br><br>
+          <mat-radio-group formControlName="unexplained_weightloss" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you lived with (resided in the same dwelling) another person who has hepatits B or clinically active (symptomatic) hepatitis C infection in the preceding 12 months?</label><br><br>
+          <mat-radio-group formControlName="lived_with" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Does your medical history or medical records show any evidence of a diagnosis or a prior positive or reactive screening test result for Hepatitis B Virus or Hepatitis C Virus or unexplained jaundice?</label><br><br>
+          <mat-radio-group formControlName="history_HepB" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Does your medical history or medical records show any evidence of a diagnosis or a prior positive or reactive screening test result for HTLV or adult T-cell leukemia?</label><br><br>
+          <mat-radio-group formControlName="history_HTLV" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you been incarcerated for more than 72 consecutive hours in the preceding 12 months?</label><br><br>
+          <mat-radio-group formControlName="incarcerated" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you, anyone in your household or any of your intimate contacts ever been diagnosed with any form of hepatitis?</label><br><br>
+          <mat-radio-group formControlName="hepatitis" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had a tattoo, ear piercing, or body piercing in the last 12 months in which instruments were shared (non-sterile instruments)?</label><br><br>
+          <mat-radio-group formControlName="shared_instruments" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had a past diagnosis of clinical, symptomatic viral hepatitis after your eleventh birthday, unless evidence from the time of illness documents that the hepatitis was identified as being caused by hepatitis A virus (e.g., a reactive IgM anti-HAV test), Epstein-Barr Virus (EBV), or cytomegalovirus (CMV)?</label><br><br>
+          <mat-radio-group formControlName="past_diagnosis" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you or any of your close contacts had a smallpox vaccine within the past 8 weeks?</label><br><br>
+          <mat-radio-group formControlName="smallpox" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Do you have a clinically recognizable vaccinia virus infection contracted by close contact with someone who received the smallpox vaccine?</label><br><br>
+          <mat-radio-group formControlName="vaccinia_virus" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had a medical diagnosis or suspicion of WNV (West Nile Virus) infection?</label><br><br>
+          <mat-radio-group formControlName="suspicion_WNV" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had both a fever and a headache (simultaneously) during the 7 days prior to donation? If yes, defer donation for 28 days.</label><br><br>
+          <mat-radio-group formControlName="fever_headache" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you or anyone you have had close contact with (e.g., intimate or living in the same household, where sharing of kitchen and bathroom facilities occurs regularly) been the recipient of a xenotransplantation product (transplantation, implantation, or infusion) of either cells, tissues or organs from a non-human animal source (this includes human bodily fluids, cells, or organs that have had an ex-vivo contact with live nonhuman animal cells, tissues, or organs) not including the product Epicel?</label><br><br>
+          <mat-radio-group formControlName="close_contact_xenotransplantation" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you had a transfusion or received blood or blood products in the last 48 hours?</label><br><br>
+          <mat-radio-group formControlName="received_blood" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you been treated for or had Chlamydia?</label><br><br>
+          <mat-radio-group formControlName="Chlamydia" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you been treated for or had Gonorrhea?</label><br><br>
+          <mat-radio-group formControlName="Gonorrhea" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you been treated for or had syphilis within the preceding 12 months?</label><br><br>
+          <mat-radio-group formControlName="syphilis" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever been diagnosed with vCJD or any other form of Creutzfeldt-Jakob disease (CJD)?</label><br><br>
+          <mat-radio-group formControlName="vCJD" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever been diagnosed with dementia or any degenerative or demyelinating disease of the central nervous system or other neurological disease of unknown etiology?</label><br><br>
+          <mat-radio-group formControlName="dementia" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have any of your blood relatives ever been diagnosed with Creutzfeldt-Jakob disease (CJD)?</label><br><br>
+          <mat-radio-group formControlName="Creutzfeldt_Jakob_disease" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you ever taken human pituitary-derived growth hormone?</label><br><br>
+          <mat-radio-group formControlName="pituitary_derived" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you received a dura mater transplant?</label><br><br>
+          <mat-radio-group formControlName="mater_transplant" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you spent 3 months or more, cumulatively, in the UK (England, Northern Ireland, Scotland, Wales, the Isle of Man, the Channel Islands, Gibraltar, or the Falkland Islands) from the beginning of 1980 through the end of 1996?</label><br><br>
+          <mat-radio-group formControlName="spent_UK" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Are you a current or former US military member, civilian military employee, or dependent of a military member or civilian employee, who has resided at US military bases in northern Europe (Germany, Belgium, and Netherlands) for 6 months or more cumulatively from 1980 through 1990, or elsewhere in Europe (Greece, Turkey, Spain, Portugal, or Italy) for 6 months or more cumulatively from 1980 through 1996?</label><br><br>
+          <mat-radio-group formControlName="military" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you lived cumulatively for 5 years or more in Europe (Albania, Austria, Belgium, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Macedonia, Netherlands, Norway, Poland, Portugal, Romania, Slovak Republic, Slovenia, Spain, Sweden, Switzerland, England, Northern Ireland, Scotland, Wales, Isle of Man, Channel Islands, Gibraltar, Falkland Islands, and Yugoslavia) from 1980 until present?</label><br><br>
+          <mat-radio-group formControlName="lived_Europe" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you received any transfusion of blood or blood components in the UK (England, Northern Island, Scotland, Wales, Isle of Man, Channel Islands, Gibraltar, Falkland Islands) or France between 1980 and the present?</label><br><br>
+          <mat-radio-group formControlName="transfusion_blood" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>Have you injected bovine insulin since 1980, unless you can confirm that the product was not manufactured after 1980 from cattle in the U.K.?</label><br><br>
+          <mat-radio-group formControlName="bovine" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Have you had any shots or vaccinations in the last 12 months?</mat-label>
+          <input matInput formControlName="vaccinations" required>
+          <mat-error *ngIf="form.controls['vaccinations'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <div class="add-bottom-padding">
+          <label>If this is a repeat donation within 6 months of your last full medical history interview have any answers to the above questions changed?</label><br><br>
+          <mat-radio-group formControlName="donation" required>
+              <mat-radio-button value="Yes">Yes</mat-radio-button>
+              <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </tr>
+      <tr>
+          <mat-label>Our organization uses a secure server for some email communication with you. The server is www.donorapplication.com. Email will come to you from no-reply@donorapplication.com. The domain of donorapplication.com needs to be acceptable to your spam filters to ensure email communication. (Google: "how to add an email address to safe list in (Outlook, Google, Yahoo, etc.)"</mat-label>
+          <br>
+          <mat-checkbox formControlName="understand">I understand</mat-checkbox>
+      </tr>
+      <br>
+      <tr>
+        <mat-label>I understand that the photos I submit may be seen by people on the Internet.</mat-label>
+        <br>
+        <mat-checkbox formControlName="understand_photos">Yes</mat-checkbox>
+      </tr>
+      <br>
+      <tr>
+        <mat-label>I understand that I should not submit photos that provide identifying information, such as school logos, team uniforms, etc.</mat-label>
+        <br>
+        <mat-checkbox formControlName="understand_logos">Yes</mat-checkbox>
+      </tr>
+      <br>
+      <u><b>Internal</b></u><br><br>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>How did you hear about us?</mat-label>
+          <mat-select formControlName="hear_about_us" required>
+            <mat-option value="Personal Referral (Provide Name)">Personal Referral (Provide Name)</mat-option>
+            <mat-option value="A Friend (Provide Name)">A Friend (Provide Name)</mat-option>
+            <mat-option value="Recruiter (Provide Name)">Recruiter (Provide Name)</mat-option>
+            <mat-option value="Craigslist Ad">Craigslist Ad</mat-option>
+            <mat-option value="Google Ad">Google Ad</mat-option>
+            <mat-option value="Internet Research">Internet Research</mat-option>
+            <mat-option value="Image Ad On a Website">Image Ad On a Website</mat-option>
+            <mat-option value="Bing Ad">Bing Ad</mat-option>
+            <mat-option value="Yahoo Ad">Yahoo Ad</mat-option>
+            <mat-option value="Facebook Post">Facebook Post</mat-option>
+            <mat-option value="Facebook Sponsored Video Ad">Facebook Sponsored Video Ad</mat-option>
+            <mat-option value="Facebook Sponsored Ad">Facebook Sponsored Ad</mat-option>
+            <mat-option value="Instagram Post">Instagram Post</mat-option>
+            <mat-option value="Instagram Sponsored Ad">Instagram Sponsored Ad</mat-option>
+            <mat-option value="Instagram Sponsored Video Ad">Instagram Sponsored Video Ad</mat-option>
+            <mat-option value="Tumblr">Tumblr</mat-option>
+            <mat-option value="Tinder">Tinder</mat-option>
+            <mat-option value="Car Ad">Car Ad</mat-option>
+            <mat-option value="Hungry SD">Hungry SD</mat-option>
+            <mat-option value="Flyer on Campus">Flyer on Campus</mat-option>
+            <mat-option value="Ad in Campus Newspaper">Ad in Campus Newspaper</mat-option>
+            <mat-option value="WeChat">WeChat</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please explain "Other".</mat-label>
+          <textarea matInput formControlName="explain_other"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Preferred Language</mat-label>
+          <mat-select formControlName="preferred_languange" required>
+            <mat-option value="Engish">English</mat-option>
+            <mat-option value="Chinese">Chinese</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['preferred_languange'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Please indicate "Others".</mat-label>
+          <textarea matInput formControlName="others_languange"></textarea>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Eligibility Status</mat-label>
+          <input matInput formControlName="Eligibility_status" required>
+          <mat-error *ngIf="form.controls['Eligibility_status'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field appearance="outline">
+          <mat-label>Coordinator</mat-label>
+          <input matInput formControlName="Coordinator" required>
+          <mat-error *ngIf="form.controls['Coordinator'].errors?.required">This field is required.</mat-error>
+        </mat-form-field>
+      </tr>
+    </td>
+  </table>
+  <div style="margin-left: 30px;" class="button-row">
+    <button mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
+    <button mat-raised-button class="my-class" color="warn" type="submit" [disabled]="!form.valid">SUBMIT <mat-icon>task_alt</mat-icon></button>
+  </div>
+</form>
