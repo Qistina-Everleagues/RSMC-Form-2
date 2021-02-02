@@ -291,19 +291,19 @@ MIT
 
 @angular/material/form-field
 
-@angular/material/select
-
-@angular/material/core
-
 @angular/material/dialog
 
 @angular/material/datepicker
 
+@angular/material/select
+
+@angular/material/core
+
+@angular/material/icon
+
 @angular/material/radio
 
 @angular/material/checkbox
-
-@angular/material/icon
 
 @angular/material/sidenav
 
