@@ -30,7 +30,7 @@ export class EggdonationComponent implements OnInit {
     reason_egg_donor: new FormControl(''),
     active_donor: new FormControl(''),
     experience: new FormControl(0),
-    times_donated_eggs: new FormControl(0),
+    times_donated_eggs: new FormControl(''),
     race: new FormControl(''),
     registered_BIA: new FormControl(0),
     eye_color: new FormControl(0),
