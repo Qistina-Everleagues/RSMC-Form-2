@@ -8,26 +8,30 @@
   <table style="margin-left: 30px; display: inline-block; width: 70%;">
     <td>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>1. First Name</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>First Name</mat-label>
           <input matInput formControlName="firstName" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>2. Last Name</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Last Name</mat-label>
           <input matInput formControlName="lastName" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>3. Please upload at least 2 photos of yourself</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Please upload at least 2 photos of yourself</mat-label>
           <input matInput formControlName="photos" maxlength="50" required>
           <mat-error *ngIf="form.controls['photos'].errors?.required">This field is required.</mat-error>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field class="my-class" appearance="outline">
+        <mat-label><b>4. Date of birth</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
           <mat-label>Date of birth</mat-label>
           <input formControlName="birthDate" matInput [matDatepicker]="picker">
           <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
@@ -35,13 +39,15 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>5. Street Address</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Street Address</mat-label>
           <input matInput formControlName="streetAdd" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>6. City</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>City</mat-label>
           <input matInput formControlName="city" maxlength="500">
         </mat-form-field>
@@ -50,7 +56,8 @@
         <table>
           <td>
             <tr>
-              <mat-form-field class="my-class" appearance="outline">
+              <mat-label><b>7. State</b></mat-label><br>
+              <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
                 <mat-select formControlName="state">
                   <mat-option value="Alabama">AL</mat-option>
@@ -109,7 +116,8 @@
           </td>
           <td>
             <tr>
-              <mat-form-field class="my-class" appearance="outline">
+              <mat-label><b>8. State</b></mat-label><br>
+              <mat-form-field style="margin-left: 15px;" class="my-class" appearance="outline">
                 <mat-label>State</mat-label>
                 <input matInput formControlName="state_fill">
               </mat-form-field>
@@ -118,36 +126,42 @@
         </table>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>9. Please indicate if outside of USA</b></mat-label><br>
+        <mat-form-field style="margin-left: 15px;" appearance="outline">
           <mat-label>Please indicate if outside of USA</mat-label>
           <textarea matInput formControlName="outside_USA" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>10. Please provide your city and country of residence</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please provide your city and country of residence</mat-label>
           <textarea matInput formControlName="city_country_residence" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>11. Zip Code</b></mat-label><br>
+        <mat-form-field class="my-class" appearance="outline">
           <mat-label>Zip Code</mat-label>
           <input matInput formControlName="zip_code" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>12. Primary telephone number (include area code) to use for contact and leaving messages</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Primary telephone number (include area code) to use for contact and leaving messages</mat-label>
           <input matInput formControlName="telephone_number" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>13. Email</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input matInput formControlName="email" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>14. Preferred method of contact</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Preferred method of contact</mat-label>
           <mat-select formControlName="contact_method">
@@ -159,24 +173,28 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>15. Please indicate "Others"</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please indicate "Others"</mat-label>
           <textarea matInput formControlName="others_contact_method" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>16. Age</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Age</mat-label>
           <input matInput formControlName="age" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>17. I want to become an egg donor because...</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>I want to become an egg donor because...</mat-label>
           <textarea matInput formControlName="reason_egg_donor" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>18. Are you currently an active donor with another program?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you currently an active donor with another program?</mat-label>
           <mat-select formControlName="active_donor">
@@ -186,6 +204,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>19. Are you an experienced egg donor?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you an experienced egg donor?</mat-label>
           <mat-select formControlName="experience">
@@ -195,18 +214,21 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>20. How many times have you donated your eggs?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How many times have you donated your eggs?</mat-label>
           <input matInput formControlName="times_donated_eggs" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>21. The closest description of your race</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>The closest description of your race</mat-label>
           <input matInput formControlName="race" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>22. Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you or any of your family member registered to the BIA (Bureau of Indian Affairs)?</mat-label>
           <mat-select formControlName="registered_BIA">
@@ -220,6 +242,7 @@
         <table>
           <td>
             <tr>
+              <mat-label><b>23. Height (feet)</b></mat-label><br>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label for="height_feet">Height</mat-label>
                 <input matInput type="text" name="htf" size="3" id="height_feet">
@@ -229,6 +252,7 @@
           </td>
           <td>
             <tr>
+              <mat-label><b>24. Height (inches)</b></mat-label><br>
               <mat-form-field class="my-class" appearance="outline">
                 <mat-label for="height_inches">Height</mat-label>
                 <input matInput type="text" name="hti" size="3" id="height_inches">
@@ -241,6 +265,7 @@
       <table>
         <td>
           <tr>
+            <mat-label><b>25. Weight</b></mat-label><br>
             <mat-form-field class="my-class" appearance="outline">
               <mat-label for="your_weight">Weight</mat-label>
               <input matInput type="text" name="wt" size="3" id="your_weight">
@@ -250,18 +275,20 @@
         </td>
         <td>
           <tr>
-        <button mat-raised-button (click)="this.compute()" class="bmi" color="warn" type="button">Compute BMI <mat-icon>cached</mat-icon></button>
-      </tr>
+            <br><br>
+            <button mat-raised-button style="margin-left: 15px;" (click)="this.compute()" color="warn" type="button">Compute BMI <mat-icon>cached</mat-icon></button>
+          </tr>
         </td>
       </table>
       <tr>
         <mat-label for="yourbmi">
-          <span style="font-size: .9em; font-weight:bold;">BMI: </span>
+          <span style="font-size: 16px; font-weight:bold;"><b>26. BMI </b></span>
         </mat-label>
         <input name="bmi" type="text" size="16" id="yourbmi" style="text-align: center"/>
       </tr>
       <br>
       <tr>
+        <mat-label><b>27. Eye Color</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Eye Color</mat-label>
           <mat-select formControlName="eye_color">
@@ -277,6 +304,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>28. Natural Hair Color</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Natural Hair Color</mat-label>
           <mat-select formControlName="hair_color">
@@ -293,6 +321,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>29. Body Type</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Body Type</mat-label>
           <mat-select formControlName="bodyType">
@@ -306,12 +335,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>30. Please indicate "Other"</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please indicate "Other"</mat-label>
           <textarea matInput formControlName="other_bodyType" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>31. Hair Type</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Hair Type</mat-label>
           <mat-select formControlName="hairType">
@@ -324,12 +355,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>32. Please indicate "Other"</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please indicate "Other"</mat-label>
           <textarea matInput formControlName="other_hairType" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>33. Complexion</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Complexion</mat-label>
           <mat-select formControlName="complexion">
@@ -342,12 +375,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>34. Please indicate "Other"</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please indicate "Other"</mat-label>
           <textarea matInput formControlName="other_complexion" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>35. Dominant Hand</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Dominant Hand</mat-label>
           <mat-select formControlName="dominant_hand">
@@ -358,6 +393,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>36. Freckles</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Freckles</mat-label>
           <mat-select formControlName="freckles">
@@ -369,6 +405,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>37. Blood Type</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Blood Type</mat-label>
           <mat-select formControlName="bloodType">
@@ -385,6 +422,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>38. Please select your highest level of education</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please select your highest level of education</mat-label>
           <mat-select formControlName="highest_level_education">
@@ -407,8 +445,8 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Educational background</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>39. Educational background</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Name of School</th>
@@ -428,8 +466,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Educational background</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>40. Educational background</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Major</th>
@@ -454,30 +492,35 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>41. Strongest subjects in school</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Strongest subjects in school</mat-label>
           <input matInput formControlName="strongest_subjects">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>42. Weakest subjects in school</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Weakest subjects in school</mat-label>
           <input matInput formControlName="weakest_subjects">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>43. Please list any awards, certficates or accomplishments</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Please list any awards, certficates or accomplishments</mat-label>
           <textarea matInput formControlName="awards"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>44. Country of birth</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Country of birth</mat-label>
           <input matInput formControlName="country_birth">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>45. Marital/relationship status</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Marital/relationship status</mat-label>
           <mat-select formControlName="marital_status">
@@ -493,6 +536,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>46. How would your friends describe your personality?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How would your friends describe your personality?</mat-label>
           <textarea matInput formControlName="personality" maxlength="5000"></textarea>
@@ -500,50 +544,58 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Is your schedule flexible?</label><br><br>
-          <mat-radio-group formControlName="schedule_flexible">
+          <label><b>47. Is your schedule flexible?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="schedule_flexible">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
       </tr>
+      <br>
       <tr>
+        <mat-label><b>48. What are your career goals?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What are your career goals?</mat-label>
           <textarea matInput formControlName="career_goals" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>49. What languages do you speak?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What languages do you speak?</mat-label>
           <input matInput formControlName="languages_speak" maxlength="50">
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>50. Describe your musical talent</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Describe your musical talent</mat-label>
           <textarea matInput formControlName="musical_talent" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>51. Describe your artistic talent</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Describe your artistic talent</mat-label>
           <textarea matInput formControlName="artistic_talent" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>52. Describe your athletic talent</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Describe your athletic talent</mat-label>
           <textarea matInput formControlName="athletic_talent" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>53. Describe your hobbies</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Describe your hobbies</mat-label>
           <textarea matInput formControlName="hobbies" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>54. How is your vision without corrective lenses or surgery?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How is your vision without corrective lenses or surgery?</mat-label>
           <mat-select formControlName="vision">
@@ -555,8 +607,9 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>55. Do you have any of the following:</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>Do you have any of the following:</mat-label>
+          <mat-label>Do you have any of the following</mat-label>
           <mat-select formControlName="following">
             <mat-option value="Astigmatism">Astigmatism</mat-option>
             <mat-option value="Farsighted">Farsighted</mat-option>
@@ -566,6 +619,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>56. How would you describe the condition of your teeth?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How would you describe the condition of your teeth?</mat-label>
           <mat-select formControlName="teeth">
@@ -578,14 +632,16 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had any periodontal or orthodontic work?</label><br><br>
-          <mat-radio-group formControlName="periodontal_work">
+          <label><b>57. Have you had any periodontal or orthodontic work?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="periodontal_work">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
       </tr>
+      <br>
       <tr>
+        <mat-label><b>58. How is your hearing without corrective aids?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How is your hearing without corrective aids?</mat-label>
           <mat-select formControlName="hearing">
@@ -597,6 +653,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>59. Do you have baldness?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Do you have baldness?</mat-label>
           <mat-select formControlName="baldness">
@@ -607,6 +664,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>60. Does baldness run in your family?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Does baldness run in your family?</mat-label>
           <mat-select formControlName="baldness_family">
@@ -618,6 +676,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>61. Have you experienced premature graying?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you experienced premature graying?</mat-label>
           <mat-select formControlName="graying">
@@ -628,6 +687,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>62. Are you currently under a physicians care for any reason?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Are you currently under a physicians care for any reason?</mat-label>
           <mat-select formControlName="under_physicians">
@@ -641,6 +701,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>63. Have you ever been seen by psychiatrist, psychologist, social worker, counselor, or any other medical health professional for any reason?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever been seen by psychiatrist, psychologist, social worker, counselor, or any other medical health professional for any reason?</mat-label>
           <mat-select formControlName="psychiatrist">
@@ -652,14 +713,15 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>64. If yes, when, for how long, for what reason</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes, when, for how long, for what reason</mat-label>
           <textarea matInput formControlName="yes_psychiatrist" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr [formGroup]="Form">
-        <mat-label><b>List all prescription medications that you have taken in the past 12 months</b></mat-label><br><br>
-        <table id="customers" formGroupName="list_medications">
+        <mat-label><b>65. List all prescription medications that you have taken in the past 12 months</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers" formGroupName="list_medications">
           <ng-container *ngIf="Form.controls.list_medications!=null">
             <div *ngFor="let list_medication of Form.controls.list_medications.controls; let i=index" [formGroupName]="i">
               <tr>
@@ -673,10 +735,11 @@
           </ng-container>
         </table>
         <br>
-        <button mat-raised-button color="Primary" type="button" (click)="addNewRow()" [disabled]="Form.invalid">Add More</button>
+        <button style="margin-left: 25px;" mat-raised-button color="Primary" type="button" (click)="addNewRow()" [disabled]="Form.invalid">Add More</button>
       </tr>
       <br>
       <tr>
+        <mat-label><b>66. Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever used medications such as antianxiety or antidepressants to treat an emotional or psychological problem?</mat-label>
           <mat-select formControlName="medications">
@@ -688,6 +751,7 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>67. Have you had any serious illness in the past that resulted in hospitalization?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you had any serious illness in the past that resulted in hospitalization?</mat-label>
           <mat-select formControlName="past_illness">
@@ -697,14 +761,15 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>68. If yes, please indicate</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>If yes, please indicate.</mat-label>
+          <mat-label>If yes, please indicate</mat-label>
           <textarea matInput formControlName="yes_past_illness" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr [formGroup]="Form2">
-          <mat-label><b>List all surgical procedures</b></mat-label><br><br>
-        <table id="customers" formGroupName="list_surgical_procedures">
+          <mat-label><b>69. List all surgical procedures</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers" formGroupName="list_surgical_procedures">
           <ng-container *ngIf="Form2.controls.list_surgical_procedures!=null">
             <div *ngFor="let list_surgical_procedure of Form2.controls.list_surgical_procedures.controls; let i=index" [formGroupName]="i">
               <tr>
@@ -719,10 +784,11 @@
           </ng-container>
         </table>
         <br>
-        <button mat-raised-button color="Primary" type="button" (click)="addNewRow2()" [disabled]="Form.invalid">Add More</button>
+        <button style="margin-left: 25px;" mat-raised-button color="Primary" type="button" (click)="addNewRow2()" [disabled]="Form.invalid">Add More</button>
       </tr>
       <br>
       <tr>
+        <mat-label><b>70. Have you ever had any complications or concerns with anesthesia?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever had any complications or concerns with anesthesia?</mat-label>
           <mat-select formControlName="anesthesia">
@@ -735,12 +801,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>71. If yes - other (minor/major), please indicate</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes - other (minor/major), please indicate</mat-label>
           <textarea matInput formControlName="yes_anesthesia"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>72. Have you had a blood transfusion?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you had a blood transfusion?</mat-label>
           <mat-select formControlName="blood_transfusion">
@@ -752,12 +820,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>73. If yes, when?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes, when?</mat-label>
           <textarea matInput formControlName="yes_blood_transfusion" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>74. Have you ever been refused or denied as a blood donor?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Have you ever been refused or denied as a blood donor?</mat-label>
           <mat-select formControlName="refused_blood_donor">
@@ -769,12 +839,14 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>75. If yes, why?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>If yes, why?</mat-label>
           <textarea matInput formControlName="yes_refused_blood_donor"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>76. Do you have allergies?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Do you have allergies?</mat-label>
           <mat-select formControlName="allergies">
@@ -801,20 +873,23 @@
       </tr>
       <tr>
         <div class="add-bottom-padding">
-          <label>Do you have biological children?</label><br><br>
-          <mat-radio-group formControlName="bioChildren">
+          <label><b>77. Do you have biological children?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="bioChildren">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
       </tr>
+      <br>
       <tr>
+        <mat-label><b>78. If yes, please list ages of children</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>If yes, please list ages of children.</mat-label>
+          <mat-label>If yes, please list ages of children</mat-label>
           <textarea matInput formControlName="list_ages_children" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>79. What kind of contraception do you currently use?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>What kind of contraception do you currently use?</mat-label>
           <mat-select formControlName="contraception">
@@ -836,14 +911,15 @@
         </mat-form-field>
       </tr>
       <tr>
+        <mat-label><b>80. Please explain "Other"</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>Please explain "Other".</mat-label>
+          <mat-label>Please explain "Other"</mat-label>
           <textarea matInput formControlName="other_contraception" maxlength="500"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Please provide information related to your menstrual cycle</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>81. Please provide information related to your menstrual cycle</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Age Started Period</th>
@@ -860,8 +936,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Please provide information related to your Pap Smear results</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>82. Please provide information related to your Pap Smear results</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Recent Pap</th>
@@ -878,98 +954,99 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Please provide information related to STD's</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>83. Please provide information related to STD's</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Me</th>
-            <th>My Partner</th>
-            <th>None</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Me</th>
+            <th style="width: 200px;">My Partner</th>
+            <th style="width: 200px;">None</th>
           </tr>
           <tr>
-            <th>AIDS</th>
-            <td><mat-checkbox formControlName="AIDS_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="AIDS_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="AIDS_None"></mat-checkbox></td>
+            <th style="width: 200px;">AIDS</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="AIDS_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="AIDS_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="AIDS_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Chlamydia</th>
-            <td><mat-checkbox formControlName="Chlamydia_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Chlamydia_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Chlamydia_None"></mat-checkbox></td>
+            <th style="width: 200px;">Chlamydia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Chlamydia_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Chlamydia_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Chlamydia_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Genital Herpes</th>
-            <td><mat-checkbox formControlName="Genital_Herpes_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Genital_Herpes_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Genital_Herpes_None"></mat-checkbox></td>
+            <th style="width: 200px;">Genital Herpes</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Herpes_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Herpes_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Herpes_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Genital Sores</th>
-            <td><mat-checkbox formControlName="Genital_Sores_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Genital_Sores_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Genital_Sores_None"></mat-checkbox></td>
+            <th style="width: 200px;">Genital Sores</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Sores_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Sores_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Genital_Sores_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Gonorrhea</th>
-            <td><mat-checkbox formControlName="Gonorrhea_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Gonorrhea_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Gonorrhea_None"></mat-checkbox></td>
+            <th style="width: 200px;">Gonorrhea</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gonorrhea_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gonorrhea_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gonorrhea_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>HIV</th>
-            <td><mat-checkbox formControlName="HIV_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="HIV_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="HIV_None"></mat-checkbox></td>
+            <th style="width: 200px;">HIV</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>NSU (non specific urethritis)</th>
-            <td><mat-checkbox formControlName="NSU_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="NSU_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="NSU_None"></mat-checkbox></td>
+            <th style="width: 200px;">NSU (non specific urethritis)</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="NSU_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="NSU_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="NSU_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Penis Discharge</th>
-            <td><mat-checkbox formControlName="Penis_Discharge_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Penis_Discharge_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Penis_Discharge_None"></mat-checkbox></td>
+            <th style="width: 200px;">Penis Discharge</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Penis_Discharge_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Penis_Discharge_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Penis_Discharge_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Syphilis</th>
-            <td><mat-checkbox formControlName="Syphilis_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Syphilis_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Syphilis_None"></mat-checkbox></td>
+            <th style="width: 200px;">Syphilis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Syphilis_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Syphilis_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Syphilis_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Trichomonas</th>
-            <td><mat-checkbox formControlName="Trichomonas_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Trichomonas_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Trichomonas_None"></mat-checkbox></td>
+            <th style="width: 200px;">Trichomonas</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Trichomonas_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Trichomonas_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Trichomonas_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Venereal Warts</th>
-            <td><mat-checkbox formControlName="Venereal_Warts_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Venereal_Warts_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Venereal_Warts_None"></mat-checkbox></td>
+            <th style="width: 200px;">Venereal Warts</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Venereal_Warts_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Venereal_Warts_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Venereal_Warts_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Viral Hepatitis B or C</th>
-            <td><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_None"></mat-checkbox></td>
+            <th style="width: 200px;">Viral Hepatitis B or C</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Viral_Hepatitis_B_or_C_None"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Other sexually transmitted diseases</th>
-            <td><mat-checkbox formControlName="Other_Me"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Other_Partner"></mat-checkbox></td>
-            <td><mat-checkbox formControlName="Other_None"></mat-checkbox></td>
+            <th style="width: 200px;">Other sexually transmitted diseases</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_Me"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_Partner"></mat-checkbox></td>
+            <td style="width: 200px;"><mat-checkbox formControlName="Other_None"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
+        <mat-label><b>84. Have you ever had the following:</b></mat-label><br>
         <mat-form-field appearance="outline">
-          <mat-label>Have you ever had the following:</mat-label>
+          <mat-label>Have you ever had the following</mat-label>
           <mat-select formControlName="ever_had">
             <mat-option value="Astigmatism">Astigmatism</mat-option>
             <mat-option value="Farsighted">Farsighted</mat-option>
@@ -979,8 +1056,8 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Please select the most accurate answer for the following question about smoking (including vape, hookah, e-cigarette), drinking, marijuana and other drugs (Cocaine, Heroin, etc).</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>85. Please select the most accurate answer for the following question about smoking (including vape, hookah, e-cigarette), drinking, marijuana and other drugs (Cocaine, Heroin, etc).</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Smoking</th>
@@ -999,8 +1076,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Please select the most appropriate answers for tattoos, acupuncture and body piercings</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>86. Please select the most appropriate answers for tattoos, acupuncture and body piercings</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Yes or No?</th>
@@ -1021,8 +1098,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Please select the most accurate answers regarding question about your experience with the law</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>87. Please select the most accurate answers regarding question about your experience with the law</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Times Arrested</th>
@@ -1037,7 +1114,7 @@
           </tr>
         </table>
         <br>
-        <table id="customers">
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Felonies</th>
@@ -1055,22 +1132,24 @@
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Are you adopted?</label><br><br>
-          <mat-radio-group formControlName="adopted">
+          <label><b>88. Are you adopted?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="adopted">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
       </tr>
+      <br>
       <tr>
+        <mat-label><b>89. How many blood siblings are in your immediate family (including yourself and half siblings)?</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>How many blood siblings are in your immediate family (including yourself and half siblings)?</mat-label>
           <input matInput formControlName="siblings" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Please provide the ethnic origin of each Grandparent. (French, German, Irish, Norwegian, Mexican, etc.)</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>90. Please provide the ethnic origin of each Grandparent. (French, German, Irish, Norwegian, Mexican, etc.)</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Maternal Grandmother</th>
@@ -1089,8 +1168,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Please provide a description of each parent and grandparent. Please complete this table. (Bone Structure refers to petite, athletic, average)</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>91. Please provide a description of each parent and grandparent. Please complete this table. (Bone Structure refers to petite, athletic, average)</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Race</th>
@@ -1135,7 +1214,7 @@
           </tr>
         </table>
         <br>
-        <table id="customers">
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Eye Color</th>
@@ -1182,8 +1261,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>Please provide a description of each sibling. Please complete this table. (Bone Structure refers to petite, athletic, average)</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>92. Please provide a description of each sibling. Please complete this table. (Bone Structure refers to petite, athletic, average)</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Gender</th>
@@ -1207,7 +1286,7 @@
           </tr>
         </table>
         <br>
-        <table id="customers">
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>Eye Color</th>
@@ -1230,8 +1309,8 @@
       </tr>
       <br>
       <tr>
-        <mat-label><b>For all genetic relatives living and deceased, please complete the following table. If unknown, type "unknown"</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>93. For all genetic relatives living and deceased, please complete the following table. If unknown, type "unknown"</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
             <th></th>
             <th>(If living) Current Age</th>
@@ -1285,804 +1364,808 @@
       </tr>
       <br>
       <tr>
+        <mat-label><b>94. Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list below</b></mat-label><br>
         <mat-form-field appearance="outline">
           <mat-label>Do you or any family member have a history of disease or tested positive as a carrier? If yes, please list below</mat-label>
           <input matInput formControlName="positive_carrier" maxlength="500">
         </mat-form-field>
       </tr>
       <tr>
-        <mat-label><b>Have you ever had any of the following diseases or tested positive as a carrier?</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>95. Have you ever had any of the following diseases or tested positive as a carrier?</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Canavan Disease</th>
-            <td><mat-checkbox formControlName="Canavan_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Canavan Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Canavan_Disease"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Cystic Fibrosis</th>
-            <td><mat-checkbox formControlName="Cystic_Fibrosis"></mat-checkbox></td>
+            <th style="width: 200px;">Cystic Fibrosis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cystic_Fibrosis"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Fragile X Syndrome</th>
-            <td><mat-checkbox formControlName="Fragile_X_Syndrome"></mat-checkbox></td>
+            <th style="width: 200px;">Fragile X Syndrome</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Fragile_X_Syndrome"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Gaucher Disease</th>
-            <td><mat-checkbox formControlName="Gaucher_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Gaucher Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gaucher_Disease"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Sickle Cell Disease</th>
-            <td><mat-checkbox formControlName="Sickle_Cell_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Sickle Cell Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Sickle_Cell_Disease"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Spinal Muscular Atrophy</th>
-            <td><mat-checkbox formControlName="Spinal_Muscular_Atrophy"></mat-checkbox></td>
+            <th style="width: 200px;">Spinal Muscular Atrophy</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Spinal_Muscular_Atrophy"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Tay-Sachs Disease</th>
-            <td><mat-checkbox formControlName="Tay_Sachs_Disease"></mat-checkbox></td>
-          </tr>
-        </table>
-      </tr>
-      <br>
-      <tr>
-        <mat-label><b>ADDICTION</b></mat-label><br><br>
-        <table id="customers">
-          <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
-          </tr>
-          <tr>
-            <th>Alcoholism</th>
-            <td><mat-checkbox formControlName="Alcoholism"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Compulsive Behaviors</th>
-            <td><mat-checkbox formControlName="Compulsive_Behaviors"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Drug Abuse</th>
-            <td><mat-checkbox formControlName="Drug_Abuse"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Drug Addict</th>
-            <td><mat-checkbox formControlName="Drug_Addict"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Drug Misuse</th>
-            <td><mat-checkbox formControlName="Drug_Misuse"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Gambling</th>
-            <td><mat-checkbox formControlName="Gambling"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Smoking</th>
-            <td><mat-checkbox formControlName="Smoking"></mat-checkbox></td>
+            <th style="width: 200px;">Tay-Sachs Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Tay_Sachs_Disease"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>BIRTH DEFECTS</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>96. ADDICTION</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Cleft Lip / Palate</th>
-            <td><mat-checkbox formControlName="Cleft_Lip_Palate"></mat-checkbox></td>
+            <th style="width: 200px;">Alcoholism</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Alcoholism"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Congenital Hip Problems</th>
-            <td><mat-checkbox formControlName="Congenital_Hip_Problems"></mat-checkbox></td>
+            <th style="width: 200px;">Compulsive Behaviors</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Compulsive_Behaviors"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Club Feet</th>
-            <td><mat-checkbox formControlName="Club_Feet"></mat-checkbox></td>
+            <th style="width: 200px;">Drug Abuse</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Drug_Abuse"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Heart Defect</th>
-            <td><mat-checkbox formControlName="Heart_Defect"></mat-checkbox></td>
+            <th style="width: 200px;">Drug Addict</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Drug_Addict"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Hearing Problems</th>
-            <td><mat-checkbox formControlName="Hearing_Problems"></mat-checkbox></td>
+            <th style="width: 200px;">Drug Misuse</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Drug_Misuse"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Holoprosencehpaly</th>
-            <td><mat-checkbox formControlName="Holoprosencehpaly"></mat-checkbox></td>
+            <th style="width: 200px;">Gambling</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gambling"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Microcephaly</th>
-            <td><mat-checkbox formControlName="Microcephaly"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Neural Tube (open spine)</th>
-            <td><mat-checkbox formControlName="Neural_Tube"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Spina Bifida</th>
-            <td><mat-checkbox formControlName="Spina_Bifida"></mat-checkbox></td>
+            <th style="width: 200px;">Smoking</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Smoking"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>BLOOD</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>97. BIRTH DEFECTS</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Anemia</th>
-            <td><mat-checkbox formControlName="Anemia"></mat-checkbox></td>
+            <th style="width: 200px;">Cleft Lip / Palate</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cleft_Lip_Palate"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Bleeding/Clotting Disorder</th>
-            <td><mat-checkbox formControlName="Bleeding_Clotting_Disorder"></mat-checkbox></td>
+            <th style="width: 200px;">Congenital Hip Problems</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Congenital_Hip_Problems"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Blood clots or strokes</th>
-            <td><mat-checkbox formControlName="Blood_clots_or_strokes"></mat-checkbox></td>
+            <th style="width: 200px;">Club Feet</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Club_Feet"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Factor V Leiden Thrombophilia</th>
-            <td><mat-checkbox formControlName="Factor_V_Leiden_Thrombophilia"></mat-checkbox></td>
+            <th style="width: 200px;">Heart Defect</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Heart_Defect"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Hemophilia</th>
-            <td><mat-checkbox formControlName="Hemophilia"></mat-checkbox></td>
+            <th style="width: 200px;">Hearing Problems</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hearing_Problems"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>HIV</th>
-            <td><mat-checkbox formControlName="HIV"></mat-checkbox></td>
+            <th style="width: 200px;">Holoprosencehpaly</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Holoprosencehpaly"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Immune Deficiency</th>
-            <td><mat-checkbox formControlName="Immune_Deficiency"></mat-checkbox></td>
+            <th style="width: 200px;">Microcephaly</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Microcephaly"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Leukemia</th>
-            <td><mat-checkbox formControlName="Leukemia"></mat-checkbox></td>
+            <th style="width: 200px;">Neural Tube (open spine)</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Neural_Tube"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Lymphoma</th>
-            <td><mat-checkbox formControlName="Lymphoma"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Polyarteritis Nodose</th>
-            <td><mat-checkbox formControlName="Polyarteritis_Nodose"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Sickle-Cell Anemia</th>
-            <td><mat-checkbox formControlName="Sickle_Cell_Anemia"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Swollen Lymph Nodes</th>
-            <td><mat-checkbox formControlName="Swolle_Lymph_Nodes"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Thalassemia</th>
-            <td><mat-checkbox formControlName="Thalassemia"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Von Willebrand's Disease</th>
-            <td><mat-checkbox formControlName="Von_Willebrand_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Spina Bifida</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Spina_Bifida"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>CANCER</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>98. BLOOD</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Breast</th>
-            <td><mat-checkbox formControlName="Breast"></mat-checkbox></td>
+            <th style="width: 200px;">Anemia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Anemia"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>ColonIntestinal</th>
-            <td><mat-checkbox formControlName="ColonIntestinal"></mat-checkbox></td>
+            <th style="width: 200px;">Bleeding/Clotting Disorder</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Bleeding_Clotting_Disorder"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Intestinal</th>
-            <td><mat-checkbox formControlName="Intestinal"></mat-checkbox></td>
+            <th style="width: 200px;">Blood clots or strokes</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Blood_clots_or_strokes"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Lung</th>
-            <td><mat-checkbox formControlName="Lung"></mat-checkbox></td>
+            <th style="width: 200px;">Factor V Leiden Thrombophilia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Factor_V_Leiden_Thrombophilia"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Ovarian</th>
-            <td><mat-checkbox formControlName="Ovarian"></mat-checkbox></td>
+            <th style="width: 200px;">Hemophilia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hemophilia"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Prostate</th>
-            <td><mat-checkbox formControlName="Prostate"></mat-checkbox></td>
+            <th style="width: 200px;">HIV</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="HIV"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Skin</th>
-            <td><mat-checkbox formControlName="Skin"></mat-checkbox></td>
+            <th style="width: 200px;">Immune Deficiency</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Immune_Deficiency"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Stomach</th>
-            <td><mat-checkbox formControlName="Stomach"></mat-checkbox></td>
+            <th style="width: 200px;">Leukemia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Leukemia"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Testicular</th>
-            <td><mat-checkbox formControlName="Testicular"></mat-checkbox></td>
+            <th style="width: 200px;">Lymphoma</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Lymphoma"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Thyroid</th>
-            <td><mat-checkbox formControlName="Thyroid"></mat-checkbox></td>
+            <th style="width: 200px;">Polyarteritis Nodose</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Polyarteritis_Nodose"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Uterine</th>
-            <td><mat-checkbox formControlName="Uterine"></mat-checkbox></td>
-          </tr>
-        </table>
-      </tr>
-      <br>
-      <tr>
-        <mat-label><b>CHROMOSOMAL</b></mat-label><br><br>
-        <table id="customers">
-          <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;">Sickle-Cell Anemia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Sickle_Cell_Anemia"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Down Syndrome</th>
-            <td><mat-checkbox formControlName="Down_Syndrome"></mat-checkbox></td>
+            <th style="width: 200px;">Swollen Lymph Nodes</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Swolle_Lymph_Nodes"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Fragile X</th>
-            <td><mat-checkbox formControlName="Fragile_X"></mat-checkbox></td>
+            <th style="width: 200px;">Thalassemia</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Thalassemia"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Klinefelter's Turner</th>
-            <td><mat-checkbox formControlName="Klinefelter_Turner"></mat-checkbox></td>
+            <th style="width: 200px;">Von Willebrand's Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Von_Willebrand_Disease"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>GASTRO-INTESTINAL</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>99. CANCER</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Appendicitis</th>
-            <td><mat-checkbox formControlName="Appendicitis"></mat-checkbox></td>
+            <th style="width: 200px;">Breast</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Breast"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Cirrhosis of the Liver</th>
-            <td><mat-checkbox formControlName="Cirrhosis_of_the_Liver"></mat-checkbox></td>
+            <th style="width: 200px;">ColonIntestinal</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="ColonIntestinal"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Crohn's Disease</th>
-            <td><mat-checkbox formControlName="Crohn_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Intestinal</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Intestinal"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Gallstones</th>
-            <td><mat-checkbox formControlName="Gallstones"></mat-checkbox></td>
+            <th style="width: 200px;">Lung</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Lung"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Hepatitis A, B, or C</th>
-            <td><mat-checkbox formControlName="Hepatitis"></mat-checkbox></td>
+            <th style="width: 200px;">Ovarian</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ovarian"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Inflammatory Bowel Disease</th>
-            <td><mat-checkbox formControlName="Inflammatory_Bowel_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Prostate</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Prostate"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Multiple Polyps of the Colon</th>
-            <td><mat-checkbox formControlName="Multiple_Polyps_of_the_Colon"></mat-checkbox></td>
+            <th style="width: 200px;">Skin</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Skin"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Pyloric Stenosis</th>
-            <td><mat-checkbox formControlName="Pyloric_Stenosis"></mat-checkbox></td>
+            <th style="width: 200px;">Stomach</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Stomach"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Rectal Disorder</th>
-            <td><mat-checkbox formControlName="Rectal_Disorder"></mat-checkbox></td>
+            <th style="width: 200px;">Testicular</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Testicular"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Ulcer of Stomach or Duodenum</th>
-            <td><mat-checkbox formControlName="Ulcer_of_Stomach_or_Duodenum"></mat-checkbox></td>
+            <th style="width: 200px;">Thyroid</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Thyroid"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Ulcerative Colitis</th>
-            <td><mat-checkbox formControlName="Ulcerative_Colitis"></mat-checkbox></td>
-          </tr>
-        </table>
-      </tr>
-      <br>
-      <tr>
-        <mat-label><b>GENITAL / REPRODUCTIVE</b></mat-label><br><br>
-        <table id="customers">
-          <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
-          </tr>
-          <tr>
-            <th>Ambiguous Genitals</th>
-            <td><mat-checkbox formControlName="Ambiguous_Genitals"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Discharge Polycystic</th>
-            <td><mat-checkbox formControlName="Discharge_Polycystic"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Endometriosis</th>
-            <td><mat-checkbox formControlName="Endometriosis"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Hermaphroditism</th>
-            <td><mat-checkbox formControlName="Hermaphroditism"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Hypospadias</th>
-            <td><mat-checkbox formControlName="Hypospadias"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Low Sperm Count</th>
-            <td><mat-checkbox formControlName="Low_Sperm_Count"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Ovarian Cysts</th>
-            <td><mat-checkbox formControlName="Ovarian_Cysts"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Ovarian Syndrome(PCOS)</th>
-            <td><mat-checkbox formControlName="Ovarian_Syndrome"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Pelvic Inflammatory Disease(PID)</th>
-            <td><mat-checkbox formControlName="Pelvic_Inflammatory_Disease"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Ruptured Lumps or Cysts in Breast</th>
-            <td><mat-checkbox formControlName="Ruptured_Lumps_or_Cysts_in_Breast"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Undescended Testicle</th>
-            <td><mat-checkbox formControlName="Undescended_Testicle"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Uterine Fibroids</th>
-            <td><mat-checkbox formControlName="Uterine_Fibroids"></mat-checkbox></td>
+            <th style="width: 200px;">Uterine</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Uterine"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>HEART</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>100. CHROMOSOMAL</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Congenital Heart Disease</th>
-            <td><mat-checkbox formControlName="Congenital_Heart_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Down Syndrome</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Down_Syndrome"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Hardening of the Arteries</th>
-            <td><mat-checkbox formControlName="Hardening_of_the_Arteries"></mat-checkbox></td>
+            <th style="width: 200px;">Fragile X</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Fragile_X"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Heart Attack</th>
-            <td><mat-checkbox formControlName="Heart_Attack"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Heart Defect</th>
-            <td><mat-checkbox formControlName="Heart_Defects"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Heart Disease</th>
-            <td><mat-checkbox formControlName="Heart_Disease"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>High Blood Pressure</th>
-            <td><mat-checkbox formControlName="High_Blood_Pressure"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>High Cholesterol Level</th>
-            <td><mat-checkbox formControlName="High_Cholesterol_Level"></mat-checkbox></td>
-          </tr>
-          <tr>
-            <th>Stroke</th>
-            <td><mat-checkbox formControlName="Stroke"></mat-checkbox></td>
+            <th style="width: 200px;">Klinefelter's Turner</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Klinefelter_Turner"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
-        <mat-label><b>SKIN</b></mat-label><br><br>
-        <table id="customers">
+        <mat-label><b>101. GASTRO-INTESTINAL</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
           <tr>
-            <th></th>
-            <th>Check if it's applicable</th>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
           </tr>
           <tr>
-            <th>Severe Acne</th>
-            <td><mat-checkbox formControlName="Severe_Acne"></mat-checkbox></td>
+            <th style="width: 200px;">Appendicitis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Appendicitis"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Albinism</th>
-            <td><mat-checkbox formControlName="Albinism"></mat-checkbox></td>
+            <th style="width: 200px;">Cirrhosis of the Liver</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Cirrhosis_of_the_Liver"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Eczema</th>
-            <td><mat-checkbox formControlName="Eczema"></mat-checkbox></td>
+            <th style="width: 200px;">Crohn's Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Crohn_Disease"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Excessive Facial Hair</th>
-            <td><mat-checkbox formControlName="Excessive_Facial_Hair"></mat-checkbox></td>
+            <th style="width: 200px;">Gallstones</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Gallstones"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Infectious Skin Disease</th>
-            <td><mat-checkbox formControlName="Infectious_Skin_Disease"></mat-checkbox></td>
+            <th style="width: 200px;">Hepatitis A, B, or C</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hepatitis"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Pigmentation Disorders</th>
-            <td><mat-checkbox formControlName="Pigmentation_Disorders"></mat-checkbox></td>
+            <th style="width: 200px;">Inflammatory Bowel Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Inflammatory_Bowel_Disease"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Psoriasis</th>
-            <td><mat-checkbox formControlName="Psoriasis"></mat-checkbox></td>
+            <th style="width: 200px;">Multiple Polyps of the Colon</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Multiple_Polyps_of_the_Colon"></mat-checkbox></td>
           </tr>
           <tr>
-            <th>Neurofibromatosis</th>
-            <td><mat-checkbox formControlName="Neurofibromatosis"></mat-checkbox></td>
+            <th style="width: 200px;">Pyloric Stenosis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Pyloric_Stenosis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Rectal Disorder</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Rectal_Disorder"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Ulcer of Stomach or Duodenum</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ulcer_of_Stomach_or_Duodenum"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Ulcerative Colitis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ulcerative_Colitis"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>102. GENITAL / REPRODUCTIVE</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
+          <tr>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Ambiguous Genitals</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ambiguous_Genitals"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Discharge Polycystic</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Discharge_Polycystic"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Endometriosis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Endometriosis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Hermaphroditism</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hermaphroditism"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Hypospadias</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hypospadias"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Low Sperm Count</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Low_Sperm_Count"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Ovarian Cysts</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ovarian_Cysts"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Ovarian Syndrome(PCOS)</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ovarian_Syndrome"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Pelvic Inflammatory Disease(PID)</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Pelvic_Inflammatory_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Ruptured Lumps or Cysts in Breast</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Ruptured_Lumps_or_Cysts_in_Breast"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Undescended Testicle</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Undescended_Testicle"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Uterine Fibroids</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Uterine_Fibroids"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>103. HEART</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
+          <tr>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Congenital Heart Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Congenital_Heart_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Hardening of the Arteries</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Hardening_of_the_Arteries"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Heart Attack</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Heart_Attack"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Heart Defect</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Heart_Defects"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Heart Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Heart_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">High Blood Pressure</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="High_Blood_Pressure"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">High Cholesterol Level</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="High_Cholesterol_Level"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Stroke</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Stroke"></mat-checkbox></td>
+          </tr>
+        </table>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>104. SKIN</b></mat-label><br><br>
+        <table style="margin-left: 25px;" id="customers">
+          <tr>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;">Check if it's applicable</th>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Severe Acne</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Severe_Acne"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Albinism</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Albinism"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Eczema</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Eczema"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Excessive Facial Hair</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Excessive_Facial_Hair"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Infectious Skin Disease</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Infectious_Skin_Disease"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Pigmentation Disorders</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Pigmentation_Disorders"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Psoriasis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Psoriasis"></mat-checkbox></td>
+          </tr>
+          <tr>
+            <th style="width: 200px;">Neurofibromatosis</th>
+            <td style="width: 200px;"><mat-checkbox formControlName="Neurofibromatosis"></mat-checkbox></td>
           </tr>
         </table>
       </tr>
       <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever injected drugs or had a sexual partner who did so?</label><br><br>
-          <mat-radio-group formControlName="injected_drugs">
+          <label><b>105. Have you ever injected drugs or had a sexual partner who did so?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="injected_drugs">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
       </tr>
+      <br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Do you have hemophilia or other related clotting disorders and have received human-derived clotting factor concentrates in the preceding five years, not including receiving clotting factors once to treat an acute bleeding event more than 12 months ago?</label><br><br>
-          <mat-radio-group formControlName="clotting">
+          <label><b>106. Do you have hemophilia or other related clotting disorders and have received human-derived clotting factor concentrates in the preceding five years, not including receiving clotting factors once to treat an acute bleeding event more than 12 months ago?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="clotting">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you engaged in sexual activity in exhange for money or drugs in the last five years?</label><br><br>
-          <mat-radio-group formControlName="sexual_activity">
+          <label><b>107. Have you engaged in sexual activity in exhange for money or drugs in the last five years?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="sexual_activity">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had sex in the preceding 12 months with any person who would have answered yes to any of the previous items, or had sex with a male who has had sex with another male in the preceding 5 years, or with any person known or suspected to have HIV infection, including any person who has had a positive or reactive test for HIV virus hepatitis B (HBV) infection or clinically active (symptomatic) hepatitis C (HCV) infection?</label><br><br>
-          <mat-radio-group formControlName="sex_12">
+          <label><b>108. Have you had sex in the preceding 12 months with any person who would have answered yes to any of the previous items, or had sex with a male who has had sex with another male in the preceding 5 years, or with any person known or suspected to have HIV infection, including any person who has had a positive or reactive test for HIV virus hepatitis B (HBV) infection or clinically active (symptomatic) hepatitis C (HCV) infection?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="sex_12">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you been exposed in the preceding 12 months to known or suspected HIV, HBV, and/or HCV-infected blood through percutaneous inoculation (e.g., needle stick) or through contact with an open wound, non-intact skin, or mucous membrane?</label><br><br>
-          <mat-radio-group formControlName="exposed_preceding">
+          <label><b>109. Have you been exposed in the preceding 12 months to known or suspected HIV, HBV, and/or HCV-infected blood through percutaneous inoculation (e.g., needle stick) or through contact with an open wound, non-intact skin, or mucous membrane?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="exposed_preceding">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had a prior reactive (or positive) screening test for HIV?</label><br><br>
-          <mat-radio-group formControlName="test_HIV">
+          <label><b>110. Have you had a prior reactive (or positive) screening test for HIV?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="test_HIV">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever had unexplained weight loss, night sweats, disseminated lymphadenopathy (swollen lymph nodes) for longer than one month, unexplained persistent cough or shortness of breath, unexplained persistent diarrhea, unexplained persistent white spots or unusual blemishes in the mouth, opportunistic infections (infection that takes advantage of a weakened immune system), or blue or purple spots on or under the skin or mucous membranes typical of Kaposi's sarcoma?</label><br><br>
-          <mat-radio-group formControlName="unexplained_weightloss">
+          <label><b>111. Have you ever had unexplained weight loss, night sweats, disseminated lymphadenopathy (swollen lymph nodes) for longer than one month, unexplained persistent cough or shortness of breath, unexplained persistent diarrhea, unexplained persistent white spots or unusual blemishes in the mouth, opportunistic infections (infection that takes advantage of a weakened immune system), or blue or purple spots on or under the skin or mucous membranes typical of Kaposi's sarcoma?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="unexplained_weightloss">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you lived with (resided in the same dwelling) another person who has hepatits B or clinically active (symptomatic) hepatitis C infection in the preceding 12 months?</label><br><br>
-          <mat-radio-group formControlName="lived_with">
+          <label><b>112. Have you lived with (resided in the same dwelling) another person who has hepatits B or clinically active (symptomatic) hepatitis C infection in the preceding 12 months?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="lived_with">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Does your medical history or medical records show any evidence of a diagnosis or a prior positive or reactive screening test result for Hepatitis B Virus or Hepatitis C Virus or unexplained jaundice?</label><br><br>
-          <mat-radio-group formControlName="history_HepB">
+          <label><b>113. Does your medical history or medical records show any evidence of a diagnosis or a prior positive or reactive screening test result for Hepatitis B Virus or Hepatitis C Virus or unexplained jaundice?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="history_HepB">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Does your medical history or medical records show any evidence of a diagnosis or a prior positive or reactive screening test result for HTLV or adult T-cell leukemia?</label><br><br>
-          <mat-radio-group formControlName="history_HTLV">
+          <label><b>114. Does your medical history or medical records show any evidence of a diagnosis or a prior positive or reactive screening test result for HTLV or adult T-cell leukemia?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="history_HTLV">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you been incarcerated for more than 72 consecutive hours in the preceding 12 months?</label><br><br>
-          <mat-radio-group formControlName="incarcerated">
+          <label><b>115. Have you been incarcerated for more than 72 consecutive hours in the preceding 12 months?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="incarcerated">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you, anyone in your household or any of your intimate contacts ever been diagnosed with any form of hepatitis?</label><br><br>
-          <mat-radio-group formControlName="hepatitis">
+          <label><b>116. Have you, anyone in your household or any of your intimate contacts ever been diagnosed with any form of hepatitis?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="hepatitis">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had a tattoo, ear piercing, or body piercing in the last 12 months in which instruments were shared (non-sterile instruments)?</label><br><br>
-          <mat-radio-group formControlName="shared_instruments">
+          <label><b>117. Have you had a tattoo, ear piercing, or body piercing in the last 12 months in which instruments were shared (non-sterile instruments)?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="shared_instruments">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had a past diagnosis of clinical, symptomatic viral hepatitis after your eleventh birthday, unless evidence from the time of illness documents that the hepatitis was identified as being caused by hepatitis A virus (e.g., a reactive IgM anti-HAV test), Epstein-Barr Virus (EBV), or cytomegalovirus (CMV)?</label><br><br>
-          <mat-radio-group formControlName="past_diagnosis">
+          <label><b>118. Have you had a past diagnosis of clinical, symptomatic viral hepatitis after your eleventh birthday, unless evidence from the time of illness documents that the hepatitis was identified as being caused by hepatitis A virus (e.g., a reactive IgM anti-HAV test), Epstein-Barr Virus (EBV), or cytomegalovirus (CMV)?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="past_diagnosis">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you or any of your close contacts had a smallpox vaccine within the past 8 weeks?</label><br><br>
-          <mat-radio-group formControlName="smallpox">
+          <label><b>119. Have you or any of your close contacts had a smallpox vaccine within the past 8 weeks?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="smallpox">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Do you have a clinically recognizable vaccinia virus infection contracted by close contact with someone who received the smallpox vaccine?</label><br><br>
-          <mat-radio-group formControlName="vaccinia_virus">
+          <label><b>120. Do you have a clinically recognizable vaccinia virus infection contracted by close contact with someone who received the smallpox vaccine?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="vaccinia_virus">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had a medical diagnosis or suspicion of WNV (West Nile Virus) infection?</label><br><br>
-          <mat-radio-group formControlName="suspicion_WNV">
+          <label><b>121. Have you had a medical diagnosis or suspicion of WNV (West Nile Virus) infection?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="suspicion_WNV">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had both a fever and a headache (simultaneously) during the 7 days prior to donation? If yes, defer donation for 28 days.</label><br><br>
-          <mat-radio-group formControlName="fever_headache">
+          <label><b>122. Have you had both a fever and a headache (simultaneously) during the 7 days prior to donation? If yes, defer donation for 28 days.</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="fever_headache">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you or anyone you have had close contact with (e.g., intimate or living in the same household, where sharing of kitchen and bathroom facilities occurs regularly) been the recipient of a xenotransplantation product (transplantation, implantation, or infusion) of either cells, tissues or organs from a non-human animal source (this includes human bodily fluids, cells, or organs that have had an ex-vivo contact with live nonhuman animal cells, tissues, or organs) not including the product Epicel?</label><br><br>
-          <mat-radio-group formControlName="close_contact_xenotransplantation">
+          <label><b>123. Have you or anyone you have had close contact with (e.g., intimate or living in the same household, where sharing of kitchen and bathroom facilities occurs regularly) been the recipient of a xenotransplantation product (transplantation, implantation, or infusion) of either cells, tissues or organs from a non-human animal source (this includes human bodily fluids, cells, or organs that have had an ex-vivo contact with live nonhuman animal cells, tissues, or organs) not including the product Epicel?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="close_contact_xenotransplantation">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you had a transfusion or received blood or blood products in the last 48 hours?</label><br><br>
-          <mat-radio-group formControlName="received_blood">
+          <label><b>124. Have you had a transfusion or received blood or blood products in the last 48 hours?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="received_blood">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you been treated for or had Chlamydia?</label><br><br>
-          <mat-radio-group formControlName="Chlamydia">
+          <label><b>125. Have you been treated for or had Chlamydia?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="Chlamydia">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you been treated for or had Gonorrhea?</label><br><br>
-          <mat-radio-group formControlName="Gonorrhea">
+          <label><b>126. Have you been treated for or had Gonorrhea?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="Gonorrhea">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you been treated for or had syphilis within the preceding 12 months?</label><br><br>
-          <mat-radio-group formControlName="syphilis">
+          <label><b>127. Have you been treated for or had syphilis within the preceding 12 months?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="syphilis">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever been diagnosed with vCJD or any other form of Creutzfeldt-Jakob disease (CJD)?</label><br><br>
-          <mat-radio-group formControlName="vCJD">
+          <label><b>128. Have you ever been diagnosed with vCJD or any other form of Creutzfeldt-Jakob disease (CJD)?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="vCJD">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever been diagnosed with dementia or any degenerative or demyelinating disease of the central nervous system or other neurological disease of unknown etiology?</label><br><br>
-          <mat-radio-group formControlName="dementia">
+          <label><b>129. Have you ever been diagnosed with dementia or any degenerative or demyelinating disease of the central nervous system or other neurological disease of unknown etiology?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="dementia">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have any of your blood relatives ever been diagnosed with Creutzfeldt-Jakob disease (CJD)?</label><br><br>
-          <mat-radio-group formControlName="Creutzfeldt_Jakob_disease">
+          <label><b>130. Have any of your blood relatives ever been diagnosed with Creutzfeldt-Jakob disease (CJD)?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="Creutzfeldt_Jakob_disease">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you ever taken human pituitary-derived growth hormone?</label><br><br>
-          <mat-radio-group formControlName="pituitary_derived">
+          <label><b>131. Have you ever taken human pituitary-derived growth hormone?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="pituitary_derived">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you received a dura mater transplant?</label><br><br>
-          <mat-radio-group formControlName="mater_transplant">
+          <label><b>132. Have you received a dura mater transplant?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="mater_transplant">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you spent 3 months or more, cumulatively, in the UK (England, Northern Ireland, Scotland, Wales, the Isle of Man, the Channel Islands, Gibraltar, or the Falkland Islands) from the beginning of 1980 through the end of 1996?</label><br><br>
-          <mat-radio-group formControlName="spent_UK">
+          <label><b>133. Have you spent 3 months or more, cumulatively, in the UK (England, Northern Ireland, Scotland, Wales, the Isle of Man, the Channel Islands, Gibraltar, or the Falkland Islands) from the beginning of 1980 through the end of 1996?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="spent_UK">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Are you a current or former US military member, civilian military employee, or dependent of a military member or civilian employee, who has resided at US military bases in northern Europe (Germany, Belgium, and Netherlands) for 6 months or more cumulatively from 1980 through 1990, or elsewhere in Europe (Greece, Turkey, Spain, Portugal, or Italy) for 6 months or more cumulatively from 1980 through 1996?</label><br><br>
-          <mat-radio-group formControlName="military">
+          <label><b>134. Are you a current or former US military member, civilian military employee, or dependent of a military member or civilian employee, who has resided at US military bases in northern Europe (Germany, Belgium, and Netherlands) for 6 months or more cumulatively from 1980 through 1990, or elsewhere in Europe (Greece, Turkey, Spain, Portugal, or Italy) for 6 months or more cumulatively from 1980 through 1996?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="military">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you lived cumulatively for 5 years or more in Europe (Albania, Austria, Belgium, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Macedonia, Netherlands, Norway, Poland, Portugal, Romania, Slovak Republic, Slovenia, Spain, Sweden, Switzerland, England, Northern Ireland, Scotland, Wales, Isle of Man, Channel Islands, Gibraltar, Falkland Islands, and Yugoslavia) from 1980 until present?</label><br><br>
-          <mat-radio-group formControlName="lived_Europe">
+          <label><b>135. Have you lived cumulatively for 5 years or more in Europe (Albania, Austria, Belgium, Bosnia-Herzegovina, Bulgaria, Croatia, Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Liechtenstein, Luxembourg, Macedonia, Netherlands, Norway, Poland, Portugal, Romania, Slovak Republic, Slovenia, Spain, Sweden, Switzerland, England, Northern Ireland, Scotland, Wales, Isle of Man, Channel Islands, Gibraltar, Falkland Islands, and Yugoslavia) from 1980 until present?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="lived_Europe">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you received any transfusion of blood or blood components in the UK (England, Northern Island, Scotland, Wales, Isle of Man, Channel Islands, Gibraltar, Falkland Islands) or France between 1980 and the present?</label><br><br>
-          <mat-radio-group formControlName="transfusion_blood">
+          <label><b>136. Have you received any transfusion of blood or blood components in the UK (England, Northern Island, Scotland, Wales, Isle of Man, Channel Islands, Gibraltar, Falkland Islands) or France between 1980 and the present?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="transfusion_blood">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>Have you injected bovine insulin since 1980, unless you can confirm that the product was not manufactured after 1980 from cattle in the U.K.?</label><br><br>
-          <mat-radio-group formControlName="bovine">
+          <label><b>137. Have you injected bovine insulin since 1980, unless you can confirm that the product was not manufactured after 1980 from cattle in the U.K.?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="bovine">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>138. Have you had any shots or vaccinations in the last 12 months?</b></mat-label><br>
+        <mat-form-field style="margin-left: 35px;" appearance="outline">
           <mat-label>Have you had any shots or vaccinations in the last 12 months?</mat-label>
           <input matInput formControlName="vaccinations" maxlength="50">
         </mat-form-field>
-      </tr>
+      </tr><br>
       <tr>
         <div class="add-bottom-padding">
-          <label>If this is a repeat donation within 6 months of your last full medical history interview have any answers to the above questions changed?</label><br><br>
-          <mat-radio-group formControlName="donation">
+          <label><b>139. If this is a repeat donation within 6 months of your last full medical history interview have any answers to the above questions changed?</b></label><br><br>
+          <mat-radio-group style="margin-left: 20px;" formControlName="donation">
               <mat-radio-button value="Yes">Yes</mat-radio-button>
               <mat-radio-button value="No">No</mat-radio-button>
           </mat-radio-group>
         </div>
-      </tr>
+      </tr><br>
       <tr>
-          <mat-label>Our organization uses a secure server for some email communication with you. The server is www.donorapplication.com. Email will come to you from no-reply@donorapplication.com. The domain of donorapplication.com needs to be acceptable to your spam filters to ensure email communication. (Google: "how to add an email address to safe list in (Outlook, Google, Yahoo, etc.)"</mat-label>
-          <br>
-          <mat-checkbox formControlName="understand">I understand</mat-checkbox>
-      </tr>
-      <br>
-      <tr>
-        <mat-label>I understand that the photos I submit may be seen by people on the Internet.</mat-label>
-        <br>
-        <mat-checkbox formControlName="understand_photos">Yes</mat-checkbox>
+          <mat-label><b>140. Our organization uses a secure server for some email communication with you. The server is <a href="www.everleagues.com">www.everleagues.com</a>. Email will come to you from <a href="service@everleagues.com">service@everleagues.com</a>. The domain of <a href="www.everleagues.com">www.everleagues.com</a> needs to be acceptable to your spam filters to ensure email communication. (Google: "how to add an email address to safe list in (Outlook, Google, Yahoo, etc.)")</b></mat-label>
+          <br><br>
+          <mat-checkbox style="margin-left: 35px;" formControlName="understand">I understand</mat-checkbox>
       </tr>
       <br>
       <tr>
-        <mat-label>I understand that I should not submit photos that provide identifying information, such as school logos, team uniforms, etc.</mat-label>
-        <br>
-        <mat-checkbox formControlName="understand_logos">Yes</mat-checkbox>
+        <mat-label><b>141. I understand that the photos I submit may be seen by people on the Internet.</b></mat-label>
+        <br><br>
+        <mat-checkbox style="margin-left: 35px;" formControlName="understand_photos">Yes</mat-checkbox>
+      </tr>
+      <br>
+      <tr>
+        <mat-label><b>142. I understand that I should not submit photos that provide identifying information, such as school logos, team uniforms, etc.</b></mat-label>
+        <br><br>
+        <mat-checkbox style="margin-left: 35px;" formControlName="understand_logos">Yes</mat-checkbox>
       </tr>
       <br>
       <u><b>Internal</b></u><br><br>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>143. How did you hear about us?</b></mat-label><br>
+        <mat-form-field style="margin-left: 35px;" appearance="outline">
           <mat-label>How did you hear about us?</mat-label>
           <mat-select formControlName="hear_about_us">
             <mat-option value="Personal Referral (Provide Name)">Personal Referral (Provide Name)</mat-option>
@@ -2112,13 +2195,15 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>144. Please explain "Other"</b></mat-label><br>
+        <mat-form-field style="margin-left: 35px;" appearance="outline">
           <mat-label>Please explain "Other"</mat-label>
           <textarea matInput formControlName="explain_other" maxlength="5000"></textarea>
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>145. Preferred Language</b></mat-label><br>
+        <mat-form-field style="margin-left: 35px;" appearance="outline">
           <mat-label>Preferred Language</mat-label>
           <mat-select formControlName="preferred_languange">
             <mat-option value="Engish">English</mat-option>
@@ -2128,7 +2213,8 @@
         </mat-form-field>
       </tr>
       <tr>
-        <mat-form-field appearance="outline">
+        <mat-label><b>146. Please indicate "Others"</b></mat-label><br>
+        <mat-form-field style="margin-left: 35px;" appearance="outline">
           <mat-label>Please indicate "Others"</mat-label>
           <textarea matInput formControlName="others_languange" maxlength="500"></textarea>
         </mat-form-field>
@@ -2136,7 +2222,7 @@
     </td>
   </table>
   <div style="margin-left: 30px;" class="button-row">
-    <button mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
-    <button mat-raised-button class="my-class" color="warn" type="submit" [disabled]="!form.valid">SUBMIT <mat-icon>task_alt</mat-icon></button>
+    <button style="margin-left: 25px;" mat-raised-button class="my-class" color="warn" type="save_progress">SAVE PROGRESS <mat-icon>save</mat-icon></button>
+    <button style="margin-left: 25px;" mat-raised-button class="my-class" color="warn" type="submit" [disabled]="!form.valid">SUBMIT <mat-icon>task_alt</mat-icon></button>
   </div>
 </form>
